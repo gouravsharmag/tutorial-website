@@ -1,12 +1,7 @@
 <?php 
+include "connection.php";
+$conn=DbConnection();
 $query="select * from tutorial";
-$servername = "localhost:6706";
-$username = "root";
-$password = "";
-$db = "tutorial_website";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password,$db);
 $data=$conn->query($query);
 $tutorial = array();
 while($row = $data->fetch_assoc()){
