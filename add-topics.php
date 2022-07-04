@@ -49,9 +49,11 @@
         </div>
         <script>
 var count =0;
+var heading_array = [];
 function addHeading(){
     tr = `<div class="form-group" id="heading_${count}"><input type="text" class="form-control dynamic-inp" id="name" aria-describedby="emailHelp" placeholder="Enter Heading" style="width:90%"><button type="button" class="btn btn-primary cancel-btn" onClick="removeHeading(${count})">x</button></div>`;
     $("#addHeading").append(tr);
+    heading_array.push(count);
 }
 function addTopics(){
     tr = `<div class="form-group" id="topic_${count}"><input type="text" class="form-control dynamic-inp" id="name" aria-describedby="emailHelp" placeholder="Enter Topic" style="width:90%;border:1px solid yellow"><button type="button" class="btn btn-danger cancel-btn" onClick="removeTopics(${count})">x</button></div>`;
@@ -65,6 +67,7 @@ function removeTopics(id){
      $(`#topic_${id}`).remove();
 }
 function submitForm(){
+
     if ((!document.getElementById("name").value) && (!document.getElementById("description").value)){
         alert("Fill Complete Details")
     }
@@ -73,6 +76,7 @@ function submitForm(){
         form = $("form#upload_form");
         var formData = new FormData(form[0]);
         formData.append('record_id', 'new');
+        fromData.append('heading_count',heading_array);
         $.ajax({
         type: 'POST',
         data: formData,
