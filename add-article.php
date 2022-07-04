@@ -82,10 +82,25 @@ while($row = $data->fetch_assoc()){
                     $('#topic_name').empty();
                     $('#topic_name').append(option);
                     },
-                failure: function(result){
-                    closeModal();
-                    document.getElementById('approveSubmit').style.pointerEvents='all';
-                }
+               
+            });
+        }
+        function getTopics(){
+            var tutorial_name =$('#tutorial_list').val();
+            var topic_name =$('#topic_name').val();
+            var article = tinyMCE.activeEditor.getContent();
+            $.ajax({
+                type: 'POST',
+                data: {
+                        "tutorial_name" : tutorial_name,
+                        "topic_name" : topic_name,
+                        "type" : "save",
+                        "article" : article
+                    },
+                url: "add-article-ajax.php",
+                success: function(data){
+
+                    },
             });
         }
     </script>
