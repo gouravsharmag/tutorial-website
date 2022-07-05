@@ -50,8 +50,9 @@ while($row = $data->fetch_assoc()){
                     <option value=''>Please Select</option>
                     <?php for($i=0;$i<count($tutorial_name);$i++){
                         $tutorial_list .= "<option value='".$tutorial_name[$i]['id']."'>".$tutorial_name[$i]['name']."</option>";
+                    }
                         echo $tutorial_list;
-                    }?>
+                    ?>
                     </select>
             </div>
             <div class="form-group">
@@ -60,6 +61,8 @@ while($row = $data->fetch_assoc()){
                     </select>
             </div>
             <textarea id="mytextarea"></textarea>
+            <br><br>
+            <button type="button" class="btn btn-primary" onClick="saveArticle()">Save</button>
         </form>
     </div>
     <script>
@@ -85,7 +88,7 @@ while($row = $data->fetch_assoc()){
                
             });
         }
-        function getTopics(){
+        function saveArticle(){
             var tutorial_name =$('#tutorial_list').val();
             var topic_name =$('#topic_name').val();
             var article = tinyMCE.activeEditor.getContent();
