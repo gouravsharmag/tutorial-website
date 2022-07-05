@@ -49,15 +49,18 @@
         </div>
         <script>
 var count =0;
-var heading_array = [];
+// var heading_array = [];
 function addHeading(){
-    tr = `<div class="form-group" id="heading_${count}"><input type="text" class="form-control dynamic-inp" id="name" aria-describedby="emailHelp" placeholder="Enter Heading" style="width:90%"><button type="button" class="btn btn-primary cancel-btn" onClick="removeHeading(${count})">x</button></div>`;
+    tr = `<div class="form-group heading_div heading_${count}" id="heading_${count}"><input type="text" class="form-control dynamic-inp heading-name" id="topic_name" name="topic_name[]" placeholder="Enter Heading" style="width:90%"><button type="button" class="btn btn-primary cancel-btn" onClick="removeHeading(${count})">x</button></div>`;
     $("#addHeading").append(tr);
-    heading_array.push(count);
+    count++;
+    // heading_array.push(count);
 }
 function addTopics(){
-    tr = `<div class="form-group" id="topic_${count}"><input type="text" class="form-control dynamic-inp" id="name" aria-describedby="emailHelp" placeholder="Enter Topic" style="width:90%;border:1px solid yellow"><button type="button" class="btn btn-danger cancel-btn" onClick="removeTopics(${count})">x</button></div>`;
+    tr = `<div class="form-group" id="topic_${count}"><input type="text" class="form-control dynamic-inp" id="topic_name" name="topic_name[]" placeholder="Enter Topic" style="width:90%;border:1px solid yellow"><button type="button" class="btn btn-danger cancel-btn" onClick="removeTopics(${count})">x</button></div>`;
     $("#addHeading").append(tr);
+    count++;
+    // topic_array.push(count);
 }
 function removeHeading(id){
     debugger;
@@ -73,10 +76,17 @@ function submitForm(){
     }
     else{
         debugger;
+        for(var i=0;i<=count;i++){
+            if($( ".heading_div" ).hasClass( `heading_${i}` )){
+                $(`#heading_${i} #topic_name`).val("H-"+$(`#heading_${i} #topic_name`).val())
+            }
+            
+        }
         form = $("form#upload_form");
         var formData = new FormData(form[0]);
         formData.append('record_id', 'new');
-        fromData.append('heading_count',heading_array);
+        // fromData.append('heading_count',heading_array);
+        // fromData.append('count',count);
         $.ajax({
         type: 'POST',
         data: formData,
