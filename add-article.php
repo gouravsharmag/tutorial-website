@@ -19,6 +19,7 @@ while($row = $data->fetch_assoc()){
 #topic_name{
     width:50%;
 }
+
 </style>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -32,11 +33,24 @@ while($row = $data->fetch_assoc()){
         plugins: [
           'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
           'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
-          'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+          'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount','codesample'
+        ],
+        codesample_languages: [
+            {text: 'HTML/XML', value: 'markup'},
+            {text: 'JavaScript', value: 'javascript'},
+            {text: 'CSS', value: 'css'},
+            {text: 'PHP', value: 'php'},
+            {text: 'Ruby', value: 'ruby'},
+            {text: 'Python', value: 'python'},
+            {text: 'Java', value: 'java'},
+            {text: 'C', value: 'c'},
+            {text: 'C#', value: 'csharp'},
+            {text: 'C++', value: 'cpp'}
         ],
         toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
-          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help |codesample'
+        ,content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
       });
     </script>
   </head>
@@ -57,7 +71,7 @@ while($row = $data->fetch_assoc()){
             </div>
             <div class="form-group">
                     <label for="topic_name">Topic Name</label>
-                    <select id="topic_name" class="form-control" name="topic_name" onChange="getTopics()">
+                    <select id="topic_name" class="form-control" name="topic_name" >
                     </select>
             </div>
             <textarea id="mytextarea"></textarea>
@@ -80,7 +94,7 @@ while($row = $data->fetch_assoc()){
                     var data = JSON.parse(data);
                     let option;
                     for(let i=0;i<data.length;i++){
-                        option+='<option value="'+data[i].id+'">'+data[i].name+'</option>';
+                        option+='<option value="'+data[i].name+'">'+data[i].name+'</option>';
                     }
                     $('#topic_name').empty();
                     $('#topic_name').append(option);
@@ -91,7 +105,7 @@ while($row = $data->fetch_assoc()){
         function saveArticle(){
             var tutorial_name =$('#tutorial_list').val();
             var topic_name =$('#topic_name').val();
-            var article = tinyMCE.activeEditor.getContent();
+            var article = tinyMCE.activeEditor.getContent({format : 'raw'});
             $.ajax({
                 type: 'POST',
                 data: {

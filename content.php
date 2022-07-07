@@ -12,7 +12,8 @@ $tutorial_list = array();
 while($row = $data->fetch_assoc()){
     $tutorial_list[] = $row;
 }
-$query="select * from post where topic_name='react'";
+$topic = str_replace('-', ' ', strtolower($_GET['alias']));
+$query="select * from post where topic_name='$topic'";
 $data=$conn->query($query);
 $content = array();
 while($row = $data->fetch_assoc()){
@@ -23,6 +24,7 @@ while($row = $data->fetch_assoc()){
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../style.css" async="">
+    <link rel="stylesheet" type="text/css" href="https://cdn.tiny.cloud/1/no-api-key/tinymce/6.0.3-5/skins/ui/oxide/content.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -42,6 +44,18 @@ while($row = $data->fetch_assoc()){
     color: #fff;
     font-weight: bold;
     font-size:15px;
+}
+.language-markup{
+    border: none;
+    border-left: 10px solid #7f6969;
+    background: #ddf6de;
+}
+h1 {
+    font-size: 42px;
+}
+#bottomnextup{
+    display: flex;
+    justify-content: right;
 }
 .tut-button:hover{
     color:#fff;
@@ -103,7 +117,7 @@ while($row = $data->fetch_assoc()){
         else{
         ?>
         <div class="leftmenu">
-            <a href="<?php echo $row['name'];?>"><?php echo $row['name'];?></a>
+            <a href="<?php echo str_replace(' ', '-', strtolower($row['name']));?>"><?php echo $row['name'];?></a>
         </div>
         <?php }}
         ?>
@@ -134,9 +148,25 @@ while($row = $data->fetch_assoc()){
     </div>
     </div>
     <div class="onlycontentinner">
-        <div class="row">
-            
-    </div>
+    <table style="width:100%;">
+<tbody><tr><td>
+<div id="bottomnextup">
+<a class="next" href="html-text-editors">next →</a>
+<a class="next" href="html-tutorial">← prev</a>
+</div>
+<?php echo $content[0]['description'];?>
+<!-- <h4 class="n">NOTE: It is recommended to write all tags in lower-case for consistency, readability, etc.</h4> -->
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="html-text-editors">HTML text Editors</a></span>
+</div>
+
+<br><br>
+<div id="bottomnext">
+<a style="float:left" class="next" href="html-tutorial">← prev</a>
+<a style="float:right" class="next" href="html-text-editors">next →</a>
+</div>
+<br><br>
+</td></tr></tbody></table>
     </div>
     <script>
         function showmenu(){

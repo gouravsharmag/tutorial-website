@@ -28,6 +28,10 @@
                     <label for="description">Description</label>
                     <textarea type="text" class="form-control" id="description" name="description"></textarea>
                 </div>
+                <div class="form-group">
+                    <label for="bkgcolor">Background Color</label>
+                    <input type="text" class="form-control" id="bkgcolor" name="bkgcolor" placeholder="Enter Background Color">
+                </div>
                 <hr>
                 <div  id="addHeading">
 

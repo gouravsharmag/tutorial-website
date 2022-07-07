@@ -6,7 +6,7 @@ if($_POST['type'] == 'save'){
     $tutorial_name = $_POST['tutorial_name'];
     $topic_name = $_POST['topic_name'];
     $type = $_POST['type'];
-    $description = strip_tags($_POST['article']);
+    $description = $_POST['article'];
     $insert_query = "INSERT INTO post (tutorial_name, topic_name, type,  description) VALUES ('$tutorial_name', '$topic_name', '$type', '$description')";
     $conn->query($insert_query);
 }
