@@ -1,11 +1,17 @@
 <?php 
 include "connection.php";
 $conn=DbConnection();
-$query="select * from tutorial";
+$query="select * from tutorial limit 10";
 $data=$conn->query($query);
-$tutorial = array();
+$tutorial_name = array();
 while($row = $data->fetch_assoc()){
-    $tutorial[] = $row;
+    $tutorial_name[] = $row;
+}
+$query="select category.id,category.name from tutorial join category on tutorial.category_id=category.id group by category_id";
+$data=$conn->query($query);
+$category = array();
+while($row = $data->fetch_assoc()){
+    $category[] = $row;
 }
 ?>
 <html>
@@ -21,9 +27,10 @@ while($row = $data->fetch_assoc()){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
 .tutorial-name{
-    margin:0rem 2rem 2rem 0rem;
+    padding: 0.5rem 0 3rem;
     border-radius: 5px;
     text-align: center;
+    margin-bottom: 2rem;
 }
 .tut-button{
     background: #282A35;
@@ -38,27 +45,35 @@ while($row = $data->fetch_assoc()){
     text-decoration: none;
     background: #000;
 }
-.home-a{
-    margin-left: 1.5rem;
+.ddsmoothmenu ul li a {
+    font-size: 17px;
+}
+.ddsmoothmenu ul li a.home-a{
     position: relative;
     bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+
+}
+body{
+    overflow-x: hidden;
 }
 </style>
 </head>
-<body onload="highlightlink()">
+<body>
 
     <button onclick="topFunction()" id="myBtn" style="display: none;">⇧ SCROLL TO TOP</button>
     <div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header">
-        <table style="width:100%;margin-bottom:5px;height: 7rem;background-color: #fff;"> 
+        <table style="width:100%;height: 7rem;background-color: #fff;"> 
         <tbody><tr> <td> 
-            <div style="clear:both;float:left;width:200px;margin-top:15px;margin-left:20px"> <a href="/"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> </div> 
+            <div style="clear:both;float:left;width:200px;margin-top:15px;margin-left:20px"> <a href="/"><img src="web_logo.png" alt="Javatpoint Logo"></a> </div> 
             <div style="float:left;width:8rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;cursor:pointer;">Tutorials </div> 
             <div style="float:left;width:3rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs" style="color:#000;text-decoration:none;">Blogs </a></div> 
-</td></tr></tbody></table></form>
+</td></tr></tbody></table></div>
     <div class="headermobile">
     <div style="margin-top:10px;padding:0px;text-align:left;">
     <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span>
-    <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span>
+    <span style="float:left"><a href="https://www.javatpoint.com"><img src="apna_tutorial_logo.png" alt="Javatpoint Logo"></a></span>
     </div>
     <div style="margin:0px;padding:0px;clear:both">
     <script>
@@ -72,18 +87,15 @@ while($row = $data->fetch_assoc()){
         s.parentNode.insertBefore(gcse, s);
     })();
     </script>
-    <div id="___gcse_1"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id2"><table cellspacing="0" cellpadding="0" id="gs_id51" class="gstl_51 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti51" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id2" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st51" dir="ltr"><a class="gsst_a" href="javascript:void(0)" title="Clear search box" role="button" style="display: none;"><span class="gscb_a" id="gs_cb51" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-refinementsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div>
-
     </div>
     </div>
     <div id="link" style="clear:both"> <div class="ddsmoothmenu">
     <ul>
-    <li><a class="home-a selected" href="https://www.javatpoint.com" ><i class="fa-solid fa-house-chimney" style="font-size: 26px;"></i></a></li>
-    <li><a href="react-native-tutorial">React Native</a>
-    </li><li><a href="reactjs-tutorial" >ReactJS</a></li>
-    <li><a href="typescript-tutorial">TypeScript</a>
-    </li><li><a href="javascript-tutorial">JavaScript</a></li>
-    <li><a href="jquery-tutorial">jQuery</a></li>
+    <li><a class="home-a selected" href="" ><i class="fa-solid fa-house-chimney" style="font-size: 26px;"></i></a></li>
+    <?php for($i=0;$i<count($tutorial_name);$i++){?>
+    <li><a href="content/<?php echo $tutorial_name[$i]['home_link'];?>"><?php echo $tutorial_name[$i]['name'];?></a>
+    <?php }?>
+    </li>
     </ul>
     <br style="clear: left">
     </div></div>
@@ -122,17 +134,32 @@ while($row = $data->fetch_assoc()){
     </div>
     </div>
     <div class="onlycontentinner">
-        <div class="row">
-            <?php for($i=0;$i<count($tutorial);$i++){?>
-        <div class="col-md-5 col-lg-5 tutorial-name" style="color:black;background-color:<?php echo $tutorial[$i]['color'];?>;padding:24px">
-            <h2 style="font-size:45px;font-weight:700"><?php echo $tutorial[$i]['name'];?></h2>
-            <div style="height:40px;">
-            <h5 class="w3-text-dark-grey"><?php echo $tutorial[$i]['description'];?></h5>
-            </div>
-            <a href="/tutorial-website/content/<?php echo $tutorial[$i]['name'];?>" class="w3-button tut-button black-color w3-margin-bottom">Learn <?php echo $tutorial[$i]['name'];?></a>
-        </div>
+            <?php for($j=0;$j<count($category);$j++){?>
+                <div class="row" style="margin-bottom:3rem;">
+                <div style="background-color: #D9EEE1;display: flow-root;padding-left: 1rem;padding-bottom:2rem;">
+                <h2 style="padding-left:1rem;"><?php echo $category[$j]['name'];?></h2>
+                <?php 
+                $category_id = $category[$j]['id'];
+                $query="select * from tutorial where category_id='$category_id'";
+                $data=$conn->query($query);
+                $tutorial = array();
+                while($row = $data->fetch_assoc()){
+                    $tutorial[] = $row;
+                }
+                for($i=0;$i<count($tutorial);$i++){?>
+                <div class="col-md-4 col-lg-4" style="color:black;">
+                    <div class="tutorial-name" style="background-color:<?php echo $tutorial[$i]['color'];?>;">
+                        <h2 style="font-size:25px;font-weight:700"><?php echo $tutorial[$i]['name'];?></h2>
+                        <div style="height:40px;">
+                            <h5 class="w3-text-dark-grey"><?php echo $tutorial[$i]['description'];?></h5>
+                        </div>
+                        <a href="/tutorial-website/content/<?php echo $tutorial[$i]['home_link'];?>" class="w3-button tut-button black-color w3-margin-bottom">Learn <?php echo $tutorial[$i]['name'];?></a>
+                    </div>
+                </div>
+                <?php }?>
+                </div>
+                </div>
         <?php }?>
-    </div>
     </div>
     <script>
         function showmenu(){

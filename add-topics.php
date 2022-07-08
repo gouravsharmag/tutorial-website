@@ -1,3 +1,13 @@
+<?php
+include "connection.php";
+$conn=DbConnection();
+$query="select * from category";
+$data=$conn->query($query);
+$category = array();
+while($row = $data->fetch_assoc()){
+    $category[] = $row;
+}
+?>
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,6 +41,17 @@
                 <div class="form-group">
                     <label for="bkgcolor">Background Color</label>
                     <input type="text" class="form-control" id="bkgcolor" name="bkgcolor" placeholder="Enter Background Color">
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" class="form-control" name="category">
+                    <option value=''>Please Select</option>
+                    <?php for($i=0;$i<count($category);$i++){
+                        $tutorial_list .= "<option value='".$category[$i]['id']."'>".$category[$i]['name']."</option>";
+                    }
+                        echo $tutorial_list;
+                    ?>
+                    </select>
                 </div>
                 <hr>
                 <div  id="addHeading">
@@ -84,6 +105,9 @@ function submitForm(){
             if($( ".heading_div" ).hasClass( `heading_${i}` )){
                 $(`#heading_${i} #topic_name`).val("H-"+$(`#heading_${i} #topic_name`).val())
             }
+            // else{
+            //     $(`#topic_${i} #topic_name`).val($(`#name`).val()+" "+$(`#topic_${i} #topic_name`).val())
+            // }
             
         }
         form = $("form#upload_form");

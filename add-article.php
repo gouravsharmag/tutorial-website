@@ -45,7 +45,8 @@ while($row = $data->fetch_assoc()){
             {text: 'Java', value: 'java'},
             {text: 'C', value: 'c'},
             {text: 'C#', value: 'csharp'},
-            {text: 'C++', value: 'cpp'}
+            {text: 'C++', value: 'cpp'},
+            {text: 'SQL', value: 'SQL'}
         ],
         toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
