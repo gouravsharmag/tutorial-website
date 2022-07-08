@@ -23,7 +23,8 @@ $tutorial_name = array();
 while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
-$topic = str_replace('-', ' ', strtolower($_GET['alias']));
+$topic = str_replace('-', ' ', strtolower($_GET['alias']));  
+$topic = substr($topic, strpos($topic, ' ') + 1);    
 $query="select * from post where topic_name='$topic'";
 $data=$conn->query($query);
 $content = array();
