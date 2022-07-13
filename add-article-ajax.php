@@ -5,9 +5,9 @@ $conn=DbConnection();
 if($_POST['page_type']=='blog'){
     $name = $_POST['name'];
     $content = $_POST['article'];
-    $blog_insert_query = "INSERT INTO blog (name, content, created_at) VALUES ('$name', '$content', NOW())";
+    $blog_insert_query = "INSERT INTO blog (blog_name, content, created_at) VALUES ('$name', '$content', NOW())";
     $conn->query($blog_insert_query);
-    echo json_encode($topic_name);
+    echo json_encode($name);
     exit;
 }
 if($_POST['type'] == 'save'){

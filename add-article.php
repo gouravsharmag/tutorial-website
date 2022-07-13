@@ -155,6 +155,7 @@ while($row = $data->fetch_assoc()){
                 success: function(data){
                         $('#tutorial_list').val('');
                         $('#topic_name').val('');
+                        $('#name').val('');
                         tinyMCE.activeEditor.setContent('');
                     },
             });

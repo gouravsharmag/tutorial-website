@@ -7,12 +7,6 @@ $tutorial_name = array();
 while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
-$query="select category.id,category.name from tutorial join category on tutorial.category_id=category.id group by category_id";
-$data=$conn->query($query);
-$category = array();
-while($row = $data->fetch_assoc()){
-    $category[] = $row;
-}
 $query="select * from blog limit 10";
 $data=$conn->query($query);
 $blogs = array();
@@ -97,6 +91,14 @@ div.onlycontent {
     width: 65%;
 }
 }
+.blogs_content{
+    margin-bottom: 3rem;
+}
+.blog_div{
+    border-bottom: 1px solid #b7a9a9;
+    margin: 0% 1%;
+    height: 11rem;
+}
 </style>
 </head>
 <body>
@@ -106,7 +108,7 @@ div.onlycontent {
         <table style="width:100%;height: 7rem;background-color: #fff;"> 
         <tbody><tr> <td> 
             <div style="clear:both;float:left;width:200px;margin-top:15px;margin-left:20px"> <a href="/"><img src="web_logo.png" alt="Javatpoint Logo"></a> </div> 
-            <div style="float:left;width:12rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;cursor:pointer;">Tutorials <i class="fa fa-caret-down" style="font-size: 20px; display: inline;"></i></div> 
+            <div style="float:left;width:8rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;cursor:pointer;">Tutorials </div> 
             <div style="float:left;width:3rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;">Blogs </a></div> 
 </td></tr></tbody></table></div>
     <div class="headermobile">
@@ -130,7 +132,7 @@ div.onlycontent {
     </div>
     <div id="link" style="clear:both"> <div class="ddsmoothmenu">
     <ul>
-    <li><a class="home-a selected" href="" ><i class="fa-solid fa-house-chimney" style="font-size: 26px;"></i></a></li>
+    <li><a class="home-a selected" href="index.php" ><i class="fa-solid fa-house-chimney" style="font-size: 26px;"></i></a></li>
     <?php for($i=0;$i<count($tutorial_name);$i++){?>
     <li><a href="content/<?php echo $tutorial_name[$i]['home_link'];?>"><?php echo $tutorial_name[$i]['name'];?></a>
     <?php }?>
@@ -143,53 +145,17 @@ div.onlycontent {
     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4=" data-push="1"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
     </div>
     <!-- left bar -->
-    <div class="onlycontent">
-
-    <div class="onlycontentad">
-    <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad">
-    <script>
-            var adpushup = window.adpushup = window.adpushup || {};
-            adpushup.que = adpushup.que || [];
-            adpushup.que.push(function() {
-                adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
-            });
-        </script>
-    </div>
-    </div>
-    <div class="onlycontentinner">
-            <?php for($j=0;$j<count($category);$j++){?>
-                <div class="row" style="margin-bottom:3rem;">
-                <div style="background-color: #D9EEE1;display: flow-root;padding-left: 1rem;padding-bottom:2rem;">
-                <h2 style="padding-left:1rem;"><?php echo $category[$j]['name'];?></h2>
-                <?php 
-                $category_id = $category[$j]['id'];
-                $query="select * from tutorial where category_id='$category_id'";
-                $data=$conn->query($query);
-                $tutorial = array();
-                while($row = $data->fetch_assoc()){
-                    $tutorial[] = $row;
-                }
-                for($i=0;$i<count($tutorial);$i++){?>
-                <div class="col-md-4 col-lg-4" style="color:black;">
-                    <div class="tutorial-name" style="background-color:<?php echo $tutorial[$i]['color'];?>;">
-                        <h2 style="font-size:25px;font-weight:700"><?php echo $tutorial[$i]['name'];?></h2>
-                        <div style="height:40px;">
-                            <h5 class="w3-text-dark-grey"><?php echo $tutorial[$i]['description'];?></h5>
-                        </div>
-                        <a href="/tutorial-website/content/<?php echo $tutorial[$i]['home_link'];?>" class="w3-button tut-button black-color w3-margin-bottom">Learn <?php echo $tutorial[$i]['name'];?></a>
-                    </div>
-                </div>
-                <?php }?>
-                </div>
-                </div>
-        <?php }?>
-    </div>
-                </div>
-                </div>
-    <div class="righthome">
-        <h1 class="bloghead">Blogs</h1>
-        <?php for($l=0;$l<count($blogs);$l++){?>
-        <div>
+    <div class="container blogs_content">
+    <!-- <div class="row"> -->
+        <?php for($l=0;$l<count($blogs);$l++){ 
+            if($l==0){
+             echo   '<div class="row">' ; 
+            }
+            if($l%3==0){
+                echo   '</div><div class="row">' ; 
+            }?>
+        <div class="col-md-4">
+            <div class="blog_div">
             <h3 style="font-weight:bold;"><?php echo $blogs[$l]['blog_name'];?></h3>
             <div class="content-blog"><?php echo $blogs[$l]['content'];?></div>
             <div><span class="white-space-wrap">
@@ -203,14 +169,16 @@ div.onlycontent {
                 </span>
             </div>
         </div>
-        <hr>
-        <?php }?>
+        </div>
+        <?php 
+    }?>
 
     </div>
+        </div>
     <div class="bg-info text-center text-white">
         <div class="container p-4">
             <span class="f-twitter">
-                <section class="mb-0"><br><p><b>ApnaTutorial</b> is an online platform which is designed to learn new technologies with a highly interactive user interface.</p></section><section class=""><div class="row foot"><div class="col-lg-3 col-md-6 mb-1 mb-md-0">
+                <section class="mb-0"><br><p>ApnaTutorial is an open platform. If you want learn something.</p></section><section class=""><div class="row foot"><div class="col-lg-3 col-md-6 mb-1 mb-md-0">
                     <ul class="list-unstyled mb-0"><li><a class="foot-link" href="/about" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/privacy" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/faq" style="display: inherit;">FAQ</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/contact" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
                     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="https://fastcodesolution.com/">ApnaTutorial</a></div>
     </div>
