@@ -19,6 +19,9 @@ while($row = $data->fetch_assoc()){
 #topic_name{
     width:50%;
 }
+.name_div{
+    display: none;
+}
 
 </style>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
@@ -59,14 +62,18 @@ while($row = $data->fetch_assoc()){
   <div class="container">
   <h1>Add Article</h1>
         <form method="POST" id="upload_form" enctype="multipart/form-data">
-        <div class="form-group">
+        <div class="form-group page_type_div">
                     <label for="page_type">Type</label>
                     <select id="page_type" class="form-control" name="page_type" onChange="showField()">
                     <option value=''>Tutorial</option>
                     <option value='blog'>Blog</option>
                     </select>
             </div>
-            <div class="form-group">
+            <div class="form-group name_div" >
+                    <label for="name">Name</label>
+                    <input type='text' id="name" class="form-control" name="name"/>
+            </div>
+            <div class="form-group tutorial_list_div">
                     <label for="tutorial_list">Tutorial Name</label>
                     <select id="tutorial_list" class="form-control" name="tutorial_list" onChange="getTopics()">
                     <option value=''>Please Select</option>
@@ -77,7 +84,7 @@ while($row = $data->fetch_assoc()){
                     ?>
                     </select>
             </div>
-            <div class="form-group">
+            <div class="form-group topic_name_div">
                     <label for="topic_name">Topic Name</label>
                     
                     <select id="topic_name" class="form-control" name="topic_name" >
@@ -116,20 +123,23 @@ while($row = $data->fetch_assoc()){
             if( $('#page_type').val() == 'blog'){
                 $('#tutorial_list').val('');
                 $('#topic_name').val('');
-                $('#tutorial_list').hide();
-                $('#topic_name').hide();
+                $('.tutorial_list_div').hide();
+                $('.topic_name_div').hide();
+                $('.name_div').show();
                 
             }else{
                 $('#tutorial_list').val('');
                 $('#topic_name').val('');
-                $('#tutorial_list').show();
-                $('#topic_name').show();
+                $('.tutorial_list_div').show();
+                $('.topic_name_div').show();
+                $('.name_div').hide();
             }
         }
         function saveArticle(){
             var tutorial_name =$('#tutorial_list').val();
             var topic_name =$('#topic_name').val();
             var page_type =$('#page_type').val();
+            var name =$('#name').val();
             var article = tinyMCE.activeEditor.getContent({format : 'raw'});
             $.ajax({
                 type: 'POST',
@@ -138,6 +148,7 @@ while($row = $data->fetch_assoc()){
                         "topic_name" : topic_name,
                         "type" : "save",
                         "page_type" : page_type,
+                        "name" :name,
                         "article" : article
                     },
                 url: "add-article-ajax.php",

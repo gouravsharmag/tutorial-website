@@ -13,6 +13,12 @@ $category = array();
 while($row = $data->fetch_assoc()){
     $category[] = $row;
 }
+$query="select * from blogs limit 10";
+$data=$conn->query($query);
+$blogs = array();
+while($row = $data->fetch_assoc()){
+    $blogs[] = $row;
+}
 ?>
 <html>
 <head>
@@ -182,6 +188,7 @@ div.onlycontent {
                 </div>
     <div class="righthome">
         <h1 class="bloghead">Blogs</h1>
+        <?php for($i=0;$i<count($blogs);$i++){?>
         <div>
             <h3 style="font-weight:bold;">The Scientific Story of Hindi Language</h3>
             <div class="content-blog">The Scientific Story of Hindi Language</div>
@@ -197,6 +204,7 @@ div.onlycontent {
             </div>
         </div>
         <hr>
+        <?php }?>
         <div>
             <h3 style="font-weight:bold;">The Scientific Story of Hindi Language</h3>
             <div class="content-blog">The Scientific Story of Hindi Language</div>
