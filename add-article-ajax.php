@@ -3,8 +3,10 @@ $id = $_POST['id'];
 include "connection.php";
 $conn=DbConnection();
 if($_POST['page_type']=='blog'){
-
-
+    $name = $_POST['name'];
+    $content = $_POST['article'];
+    $blog_insert_query = "INSERT INTO blog (name, content, created_at) VALUES ('$name', '$content', NOW())";
+    $conn->query($blog_insert_query);
     echo json_encode($topic_name);
     exit;
 }
