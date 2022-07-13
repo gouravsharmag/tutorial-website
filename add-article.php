@@ -50,7 +50,7 @@ while($row = $data->fetch_assoc()){
         ],
         toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
-          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help |codesample'
+          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help |codesample |code'
         ,content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
       });
     </script>
@@ -59,6 +59,13 @@ while($row = $data->fetch_assoc()){
   <div class="container">
   <h1>Add Article</h1>
         <form method="POST" id="upload_form" enctype="multipart/form-data">
+        <div class="form-group">
+                    <label for="page_type">Type</label>
+                    <select id="page_type" class="form-control" name="page_type" onChange="showField()">
+                    <option value=''>Tutorial</option>
+                    <option value='blog'>Blog</option>
+                    </select>
+            </div>
             <div class="form-group">
                     <label for="tutorial_list">Tutorial Name</label>
                     <select id="tutorial_list" class="form-control" name="tutorial_list" onChange="getTopics()">
@@ -72,7 +79,9 @@ while($row = $data->fetch_assoc()){
             </div>
             <div class="form-group">
                     <label for="topic_name">Topic Name</label>
+                    
                     <select id="topic_name" class="form-control" name="topic_name" >
+                    <option value=''>Please Select</option>
                     </select>
             </div>
             <textarea id="mytextarea"></textarea>
@@ -103,9 +112,24 @@ while($row = $data->fetch_assoc()){
                
             });
         }
+        function showField(){
+            if( $('#page_type').val() == 'blog'){
+                $('#tutorial_list').val('');
+                $('#topic_name').val('');
+                $('#tutorial_list').hide();
+                $('#topic_name').hide();
+                
+            }else{
+                $('#tutorial_list').val('');
+                $('#topic_name').val('');
+                $('#tutorial_list').show();
+                $('#topic_name').show();
+            }
+        }
         function saveArticle(){
             var tutorial_name =$('#tutorial_list').val();
             var topic_name =$('#topic_name').val();
+            var page_type =$('#page_type').val();
             var article = tinyMCE.activeEditor.getContent({format : 'raw'});
             $.ajax({
                 type: 'POST',
@@ -113,11 +137,14 @@ while($row = $data->fetch_assoc()){
                         "tutorial_name" : tutorial_name,
                         "topic_name" : topic_name,
                         "type" : "save",
+                        "page_type" : page_type,
                         "article" : article
                     },
                 url: "add-article-ajax.php",
                 success: function(data){
-
+                        $('#tutorial_list').val('');
+                        $('#topic_name').val('');
+                        tinyMCE.activeEditor.setContent('');
                     },
             });
         }

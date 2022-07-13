@@ -58,12 +58,45 @@ while($row = $data->fetch_assoc()){
 body{
     overflow-x: hidden;
 }
+.righthome{
+    width: 29%;
+    float: left;
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.bloghead{
+    background: #D9EEE1;
+    color:#000;
+    font-size: 20px;
+    border-left: 10px solid #282A35;
+    padding: 10px 5px;
+}
+.content-blog{
+    color: #777;
+}
+.time-blog{
+    position: relative;
+    top: 4px;
+}
+div.onlycontent{
+    margin: 0% 1% 0% 2%;
+}
+.bg-info{
+    width: 100%;
+    display: flow-root;
+}
+@media screen and (min-width: 1025px) and (max-width: 1441px){
+div.onlycontent {
+    width: 65%;
+}
+}
 </style>
 </head>
 <body>
 
-    <button onclick="topFunction()" id="myBtn" style="display: none;">⇧ SCROLL TO TOP</button>
-    <div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header">
+    <button onclick="topFunction()" id="myBtn">⇧ TOP</button>
+    <div id="page" style="margin:-8px;background-color:#ffffff;"><div id="container"> <div class="header">
         <table style="width:100%;height: 7rem;background-color: #fff;"> 
         <tbody><tr> <td> 
             <div style="clear:both;float:left;width:200px;margin-top:15px;margin-left:20px"> <a href="/"><img src="web_logo.png" alt="Javatpoint Logo"></a> </div> 
@@ -104,22 +137,6 @@ body{
     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4=" data-push="1"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
     </div>
     <!-- left bar -->
-    <div id="menu">
-
-
-    <div id="leftad" style="margin-left:20px">
-
-    <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad">
-    <script>
-            var adpushup = window.adpushup = window.adpushup || {};
-            adpushup.que = adpushup.que || [];
-            adpushup.que.push(function() {
-                adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
-            });
-        </script>
-    </div>
-    </div>
-    </div>
     <div class="onlycontent">
 
     <div class="onlycontentad">
@@ -161,11 +178,83 @@ body{
                 </div>
         <?php }?>
     </div>
+                </div>
+                </div>
+    <div class="righthome">
+        <h1 class="bloghead">Blogs</h1>
+        <div>
+            <h3 style="font-weight:bold;">The Scientific Story of Hindi Language</h3>
+            <div class="content-blog">The Scientific Story of Hindi Language</div>
+            <div><span class="white-space-wrap">
+				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
+                </span>
+                <span class="time-blog">
+                    <svg class="star-15px_svg__svgIcon-use" width="15" height="15" viewBox="0 0 15 15">
+                        <path d="M7.44 2.32c.03-.1.09-.1.12 0l1.2 3.53a.29.29 0 0 0 .26.2h3.88c.11 0 .13.04.04.1L9.8 8.33a.27.27 0 0 0-.1.29l1.2 3.53c.03.1-.01.13-.1.07l-3.14-2.18a.3.3 0 0 0-.32 0L4.2 12.22c-.1.06-.14.03-.1-.07l1.2-3.53a.27.27 0 0 0-.1-.3L2.06 6.16c-.1-.06-.07-.12.03-.12h3.89a.29.29 0 0 0 .26-.19l1.2-3.52z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h3 style="font-weight:bold;">The Scientific Story of Hindi Language</h3>
+            <div class="content-blog">The Scientific Story of Hindi Language</div>
+            <div><span class="white-space-wrap">
+				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
+                </span>
+                <span class="time-blog">
+                    <svg class="star-15px_svg__svgIcon-use" width="15" height="15" viewBox="0 0 15 15">
+                        <path d="M7.44 2.32c.03-.1.09-.1.12 0l1.2 3.53a.29.29 0 0 0 .26.2h3.88c.11 0 .13.04.04.1L9.8 8.33a.27.27 0 0 0-.1.29l1.2 3.53c.03.1-.01.13-.1.07l-3.14-2.18a.3.3 0 0 0-.32 0L4.2 12.22c-.1.06-.14.03-.1-.07l1.2-3.53a.27.27 0 0 0-.1-.3L2.06 6.16c-.1-.06-.07-.12.03-.12h3.89a.29.29 0 0 0 .26-.19l1.2-3.52z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-weight:bold;">The Scientific Story of Hindi Language</h3>
+            <div class="content-blog">The Scientific Story of Hindi Language</div>
+            <div><span class="white-space-wrap">
+				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
+                </span>
+                <span class="time-blog">
+                    <svg class="star-15px_svg__svgIcon-use" width="15" height="15" viewBox="0 0 15 15">
+                        <path d="M7.44 2.32c.03-.1.09-.1.12 0l1.2 3.53a.29.29 0 0 0 .26.2h3.88c.11 0 .13.04.04.1L9.8 8.33a.27.27 0 0 0-.1.29l1.2 3.53c.03.1-.01.13-.1.07l-3.14-2.18a.3.3 0 0 0-.32 0L4.2 12.22c-.1.06-.14.03-.1-.07l1.2-3.53a.27.27 0 0 0-.1-.3L2.06 6.16c-.1-.06-.07-.12.03-.12h3.89a.29.29 0 0 0 .26-.19l1.2-3.52z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="bg-info text-center text-white">
+        <div class="container p-4">
+            <span class="f-twitter">
+                <section class="mb-0"><br><p>ApnaTutorial is an open platform. If you want learn something.</p></section><section class=""><div class="row foot"><div class="col-lg-3 col-md-6 mb-1 mb-md-0">
+                    <ul class="list-unstyled mb-0"><li><a class="foot-link" href="/about" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/privacy" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/faq" style="display: inherit;">FAQ</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/contact" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="https://fastcodesolution.com/">ApnaTutorial</a></div>
+    </div>
     <script>
         function showmenu(){
             $("#menu").show();
             $("#menu").css({width:"100%"});
         }
+        var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
     </script>
     </body>
 </html>

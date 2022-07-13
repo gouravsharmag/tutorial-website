@@ -94,7 +94,7 @@ overflow-x: hidden;
 </head>
 <body>
 
-    <button onclick="topFunction()" id="myBtn" style="display: none;">⇧ SCROLL TO TOP</button>
+    <button onclick="topFunction()" id="myBtn">⇧ SCROLL TO TOP</button>
     <div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header">
         <table style="width:100%;height: 7rem;background-color: #fff;"> 
         <tbody><tr> <td> 

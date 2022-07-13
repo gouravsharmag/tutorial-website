@@ -2,6 +2,12 @@
 $id = $_POST['id'];
 include "connection.php";
 $conn=DbConnection();
+if($_POST['page_type']=='blog'){
+
+
+    echo json_encode($topic_name);
+    exit;
+}
 if($_POST['type'] == 'save'){
     $tutorial_name = $_POST['tutorial_name'];
     $topic_name = $_POST['topic_name'];
