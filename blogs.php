@@ -99,17 +99,20 @@ div.onlycontent {
     margin: 0% 1%;
     height: 11rem;
 }
+#container{
+    background: #fff;
+}
 </style>
 </head>
 <body>
 
     <button onclick="topFunction()" id="myBtn">⇧ TOP</button>
     <div id="page" style="margin:-8px;background-color:#ffffff;"><div id="container"> <div class="header">
-        <table style="width:100%;height: 7rem;background-color: #fff;"> 
+        <table style="width:100%;height: 6rem;background-color: #fff;"> 
         <tbody><tr> <td> 
-            <div style="clear:both;float:left;width:200px;margin-top:15px;margin-left:20px"> <a href="/"><img src="web_logo.png" alt="Javatpoint Logo"></a> </div> 
-            <div style="float:left;width:8rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;cursor:pointer;">Tutorials </div> 
-            <div style="float:left;width:3rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;">Blogs </a></div> 
+            <div style="clear:both;float:left;width:15rem;margin-top:1.6rem;margin-left:20px;font-size: 20px;color:#000000"> <a href="index.php" style="color:#000000;text-decoration:none;"><span style="background:red;padding: 3px 5px;border-radius: 50%;">A</span>pnaTutorial</a> </div> 
+            <!-- <div style="float:left;width:12rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;cursor:pointer;">Tutorials <i class="fa fa-caret-down" style="font-size: 20px; display: inline;"></i></div>  -->
+            <div style="float:left;width:3rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;">Blogs </a></div> 
 </td></tr></tbody></table></div>
     <div class="headermobile">
     <div style="margin-top:10px;padding:0px;text-align:left;">
@@ -156,7 +159,8 @@ div.onlycontent {
             }?>
         <div class="col-md-4">
             <div class="blog_div">
-            <h3 style="font-weight:bold;"><?php echo $blogs[$l]['blog_name'];?></h3>
+                <a style="text-decoration:none;"href="blog-content/<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>">
+            <h3 style="font-weight:bold;color:#000"><?php echo $blogs[$l]['blog_name'];?></h3>
             <div class="content-blog"><?php echo $blogs[$l]['content'];?></div>
             <div><span class="white-space-wrap">
 				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
@@ -168,6 +172,7 @@ div.onlycontent {
                     </svg>
                 </span>
             </div>
+        </a>
         </div>
         </div>
         <?php 

@@ -122,8 +122,11 @@ function submitForm(){
         contentType: false,
         url: "addTopicsAjax.php",
         success: function (data) {
-            data = JSON.parse(data);
-            console.log(data);
+            // data = JSON.parse(data);
+            // console.log(data);
+            alert("Topics added successfully");
+            window.location.reload();
+
         },
         complete: function(data){
         },

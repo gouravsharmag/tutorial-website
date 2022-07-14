@@ -91,6 +91,7 @@ div.onlycontent{
 .bg-info{
     width: 100%;
     display: flow-root;
+    font-size: 17px;
 }
 @media screen and (min-width: 1025px) and (max-width: 1441px){
 div.onlycontent {
@@ -103,11 +104,11 @@ div.onlycontent {
 
     <button onclick="topFunction()" id="myBtn">⇧ TOP</button>
     <div id="page" style="margin:-8px;background-color:#ffffff;"><div id="container"> <div class="header">
-        <table style="width:100%;height: 7rem;background-color: #fff;"> 
+        <table style="width:100%;height: 6rem;background-color: #fff;"> 
         <tbody><tr> <td> 
-            <div style="clear:both;float:left;width:200px;margin-top:15px;margin-left:20px"> <a href="/"><img src="web_logo.png" alt="Javatpoint Logo"></a> </div> 
-            <div style="float:left;width:12rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;cursor:pointer;">Tutorials <i class="fa fa-caret-down" style="font-size: 20px; display: inline;"></i></div> 
-            <div style="float:left;width:3rem;margin-top:2rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;">Blogs </a></div> 
+            <div style="clear:both;float:left;width:15rem;margin-top:1.6rem;margin-left:20px;font-size: 20px;color:#000000"> <a href="../" style="color:#000000;text-decoration:none;"><span style="background:red;padding: 3px 5px;border-radius: 50%;">A</span>pnaTutorial</a> </div> 
+            <!-- <div style="float:left;width:12rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;cursor:pointer;">Tutorials <i class="fa fa-caret-down" style="font-size: 20px; display: inline;"></i></div>  -->
+            <div style="float:left;width:3rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;">Blogs </a></div> 
 </td></tr></tbody></table></div>
     <div class="headermobile">
     <div style="margin-top:10px;padding:0px;text-align:left;">
@@ -190,6 +191,7 @@ div.onlycontent {
         <h1 class="bloghead">Blogs</h1>
         <?php for($l=0;$l<count($blogs);$l++){?>
         <div>
+            <a href="blog-content/<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>" style="text-decoration:none">
             <h3 style="font-weight:bold;"><?php echo $blogs[$l]['blog_name'];?></h3>
             <div class="content-blog"><?php echo $blogs[$l]['content'];?></div>
             <div><span class="white-space-wrap">
@@ -202,6 +204,7 @@ div.onlycontent {
                     </svg>
                 </span>
             </div>
+        </a>
         </div>
         <hr>
         <?php }?>
@@ -212,7 +215,7 @@ div.onlycontent {
             <span class="f-twitter">
                 <section class="mb-0"><br><p><b>ApnaTutorial</b> is an online platform which is designed to learn new technologies with a highly interactive user interface.</p></section><section class=""><div class="row foot"><div class="col-lg-3 col-md-6 mb-1 mb-md-0">
                     <ul class="list-unstyled mb-0"><li><a class="foot-link" href="/about" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/privacy" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/faq" style="display: inherit;">FAQ</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/contact" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
-                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="https://fastcodesolution.com/">ApnaTutorial</a></div>
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="">ApnaTutorial</a></div>
     </div>
     <script>
         function showmenu(){

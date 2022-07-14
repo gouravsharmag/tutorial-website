@@ -1,2 +1,3 @@
 RewriteEngine On
-RewriteRule ^([^/\.]+)/([^/\.]+)?$ content.php?type=$1&alias=$2
+RewriteRule ^([^/\.]+)/([^/\.]+)?$ $1.php?type=$1&alias=$2
+RewriteRule ^([^/\.]+)/([^/\.]+)?$ blog-content.php?type=$1&alias=$2
