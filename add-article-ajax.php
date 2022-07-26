@@ -10,6 +10,16 @@ if($_POST['page_type']=='blog'){
     echo json_encode($name);
     exit;
 }
+if($_POST['page_type']=='getContent'){
+    $tutorial_name = $_POST['tutorial_name'];
+    $topic_name = $_POST['topic_name'];
+    $tutorial_query = "SELECT description FROM post WHERE tutorial_name = '$tutorial_name' and topic_name='$topic_name'";
+    $tutorial_query = $conn->query($tutorial_query);
+    $tutorial_data = $tutorial_query->fetch_assoc();
+    $tutorial_data = $tutorial_data['description'];
+    echo json_encode($tutorial_data);
+    exit;
+}
 if($_POST['type'] == 'save'){
     $tutorial_name = $_POST['tutorial_name'];
     $topic_name = $_POST['topic_name'];

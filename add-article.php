@@ -49,7 +49,7 @@ while($row = $data->fetch_assoc()){
             {text: 'C', value: 'c'},
             {text: 'C#', value: 'csharp'},
             {text: 'C++', value: 'cpp'},
-            {text: 'SQL', value: 'SQL'}
+            {text: 'SQL', value: 'sql'}
         ],
         toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
@@ -134,6 +134,25 @@ while($row = $data->fetch_assoc()){
                 $('.topic_name_div').show();
                 $('.name_div').hide();
             }
+        }
+        function getContent(){
+            var tutorial_name =$('#tutorial_list').val();
+            var topic_name =$('#topic_name').val();
+            $.ajax({
+                type: 'POST',
+                data: {
+                        "tutorial_name" : tutorial_name,
+                        "topic_name" : topic_name,
+                        "type" : "getContent",
+                    },
+                url: "add-article-ajax.php",
+                success: function(data){
+                        $('#tutorial_list').val('');
+                        $('#topic_name').val('');
+                        $('#name').val('');
+                        tinyMCE.activeEditor.setContent('');
+                    },
+            });
         }
         function saveArticle(){
             var tutorial_name =$('#tutorial_list').val();

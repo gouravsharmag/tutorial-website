@@ -123,7 +123,7 @@ overflow-x: hidden;
 
     </div>
     </div>
-    <div id="link" style="clear:both"> <div class="ddsmoothmenu">
+    <div id="link" style="clear:both"> <div class="ddsmoothmenu" style="z-index: 99;">
     <ul>
     <li><a class="home-a" href="../" ><i class="fa-solid fa-house-chimney" style="font-size: 26px;"></i></a></li>
     <?php for($i=0;$i<count($tutorial_name);$i++){
