@@ -93,13 +93,13 @@ input{
                     <div class="entry-content"><p>If you have any suggestions regarding the tutorials on this website, please feel free to send us your feedback.</p></div>
                 </article>
                 <div class="contact-form">
-                    <form action="https://www.javascripttutorial.net/contact/" id="contact-form" method="post">
+                <form method="POST" id="upload_form" enctype="multipart/form-data">
                         <div class="form-field form-group"> 
                             <label for="contact_name">Name:</label> <input autofocus="true" type="text" name="contact_name" id="contact_name" value="" required=""> <small class="error"></small></div>
                             <div class="form-field form-group"> <label for="email">Email:</label> <input type="email" name="email" id="email" value="" required=""> <small class="error"></small></div>
                             <div class="form-field form-group"> <label for="message">Message: </label><textarea name="message" id="message" cols="30" rows="10" required=""></textarea><small class="error"></small>
                         </div>
-                            <div class="form-field form-group"> <input type="submit" value="Send" class="submit"></div> 
+                            <div class="form-field form-group"> <button type="button" class="btn btn-primary" onClick="submitForm()">Send</button></div> 
                     </form>
                 </div>
             </main>
@@ -112,5 +112,31 @@ input{
                     <ul class="list-unstyled mb-0"><li><a class="foot-link" href="about.php" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="privacy.php" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="contact.php" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
                     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="index.php">ApnaTutorial</a></div>
     </div>
+    <script>
+function submitForm(){
+
+if ((!document.getElementById("contact_name").value) && (!document.getElementById("email").value)){
+    alert("Fill Complete Details")
+}
+else{
+    form = $("form#upload_form");
+    var formData = new FormData(form[0]);
+    formData.append('type', 'save');
+    $.ajax({
+    type: 'POST',
+    data: formData,
+    processData: false,
+    contentType: false,
+    url: "contactAjax.php",
+    success: function (data) {
+        alert("Request Submitted");
+        window.location.reload();
+    },
+    complete: function(data){
+    },
+});
+}
+}
+    </script>
 </body>
 </html>
