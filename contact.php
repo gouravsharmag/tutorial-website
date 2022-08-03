@@ -42,6 +42,11 @@ input{
     color: #fff;
     background: blue;
 }
+.btn-sub{
+    
+    width: 25rem;
+
+}
 </style>
 <body>
 <button onclick="topFunction()" id="myBtn">⇧ TOP</button>
@@ -55,7 +60,7 @@ input{
     <div class="headermobile">
     <div style="margin-top:10px;padding:0px;text-align:left;">
     <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span>
-    <span style="float:left"><a href="https://www.javatpoint.com"><img src="apna_tutorial_logo.png" alt="Javatpoint Logo"></a></span>
+    <span style="float:left"><a href="index.php" style="color:#000000;text-decoration:none;"><span style="background:red;padding: 3px 5px;border-radius: 50%;">A</span>pnaTutorial</a></span>
     </div>
     <div style="margin:0px;padding:0px;clear:both">
     <script>
@@ -99,7 +104,7 @@ input{
                             <div class="form-field form-group"> <label for="email">Email:</label> <input type="email" name="email" id="email" value="" required=""> <small class="error"></small></div>
                             <div class="form-field form-group"> <label for="message">Message: </label><textarea name="message" id="message" cols="30" rows="10" required=""></textarea><small class="error"></small>
                         </div>
-                            <div class="form-field form-group"> <button type="button" class="btn btn-primary" onClick="submitForm()">Send</button></div> 
+                            <div class="form-field form-group"> <button type="button" class="btn btn-primary btn-sub" onClick="submitForm()">Send</button></div> 
                     </form>
                 </div>
             </main>
@@ -130,13 +135,27 @@ else{
     url: "contactAjax.php",
     success: function (data) {
         alert("Request Submitted");
-        window.location.reload();
+        window.location.href='index.php';
     },
     complete: function(data){
     },
 });
 }
 }
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
     </script>
 </body>
 </html>

@@ -42,6 +42,11 @@ input{
     color: #fff;
     background: blue;
 }
+p{
+    
+    font-size: 20px;
+
+}
 </style>
 <body>
 <button onclick="topFunction()" id="myBtn">⇧ TOP</button>
@@ -55,7 +60,7 @@ input{
     <div class="headermobile">
     <div style="margin-top:10px;padding:0px;text-align:left;">
     <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span>
-    <span style="float:left"><a href="https://www.javatpoint.com"><img src="apna_tutorial_logo.png" alt="Javatpoint Logo"></a></span>
+    <span style="float:left"><a href="index.php" style="color:#000000;text-decoration:none;"><span style="background:red;padding: 3px 5px;border-radius: 50%;">A</span>pnaTutorial</a></span>
     </div>
     <div style="margin:0px;padding:0px;clear:both">
     <script>
@@ -88,9 +93,27 @@ input{
     <div class="container">
     <div class="site-inner wrap">
         <main id="secondary" class="site-secondary">
-                <article id="post-20" class="post-20 page type-page status-publish hentry">
+        <article id="post-20" class="post-20 page type-page status-publish hentry">
                     <header class="entry-header"><h1 class="entry-title">About Us</h1></header>
-                    <div class="entry-content"><p>If you have any suggestions regarding the tutorials on this website, please feel free to send us your feedback.</p></div>
+                    <div class="entry-content">
+                        <p>
+                        <b>Story:</b><br>
+                        The origin of ApnaTutorial is for helping the students community to get the better education in every aspects.
+                        To provide the quality education for every students, we have come up with an online platform ApnaTutorial.
+                        <br><br>
+                        <b>Mission:</b><br>
+                        ApnaTutorial is providing the learning growth to the students who are facing difficulties to understand theory with examples. 
+                        The main motto of ApnaTutorial is to provide education at free of cost. We are on the mission to provide free education from scratch.
+                        Easily interaction with new technologies via online platform gives you the glimpse of success.
+                        <br><br>
+                        <b>Services:</b><br>
+                        ApnaTutorial provides the services to students as well as professionals. We have full command to provide education for new technologies as well as academics purpose.
+                        We will provide the full services in Programming Languages, Machine learning, Artificial Intelligence and Databases etc.
+                        <br><br>
+                        <b>Social:</b><br>
+                        ApnaTutorial considered under one of the top e-learning website. Students reviewed it top website which provides better interface.
+                        </p></b><br></b><br></b>
+                    </div>
                 </article>
                 
             </main>
@@ -103,5 +126,21 @@ input{
                     <ul class="list-unstyled mb-0"><li><a class="foot-link" href="about.php" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="privacy.php" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="contact.php" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
                     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="index.php">ApnaTutorial</a></div>
     </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        </script>
 </body>
 </html>

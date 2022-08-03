@@ -98,6 +98,11 @@ div.onlycontent {
     width: 65%;
 }
 }
+@media screen and (min-width: 100px) and (max-width: 700px){
+div.righthome {
+    width: 90%;
+}
+}
 </style>
 </head>
 <body>
@@ -111,22 +116,11 @@ div.onlycontent {
             <div style="float:left;width:3rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;">Blogs </a></div> 
 </td></tr></tbody></table></div>
     <div class="headermobile">
-    <div style="margin-top:10px;padding:0px;text-align:left;">
-    <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span>
-    <span style="float:left"><a href="https://www.javatpoint.com"><img src="apna_tutorial_logo.png" alt="Javatpoint Logo"></a></span>
-    </div>
+    <div style="margin-top:10px;padding:0px;text-align:left;padding-top:0.5rem;">
+    <span style="float:left"><a href="index.php" style="color:#000000;text-decoration:none;padding-left: 1.5rem;"><span style="background:red;padding: 3px 5px;border-radius: 50%;">A</span>pnaTutorial</a></span> 
+    <span style="position: relative;right: 1rem;"><i class="fa-solid fa-bars" style="font-size: 30px;float: right;"></i></span>
+</div>
     <div style="margin:0px;padding:0px;clear:both">
-    <script>
-    (function() {
-        var cx = '005383125436438536544:y1edweedxwi';
-        var gcse = document.createElement('script');
-        gcse.type = 'text/javascript';
-        gcse.async = true;
-        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-    })();
-    </script>
     </div>
     </div>
     <div id="link" style="clear:both"> <div class="ddsmoothmenu">

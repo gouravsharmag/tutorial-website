@@ -7,6 +7,13 @@ $tutorial_name = array();
 while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
+// $blog_name = $_GET['blog'];
+// if(isset($blog_name)){
+//     $blog_query = "SELECT content FROM blog WHERE blog_name = '$blog_name'";
+//     $blog_query = $conn->query($blog_query);
+//     $blog_data = $blog_query->fetch_assoc();
+//     $blog_data = $blog_data['content'];
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,10 +71,17 @@ while($row = $data->fetch_assoc()){
         <form method="POST" id="upload_form" enctype="multipart/form-data">
         <div class="form-group page_type_div">
                     <label for="page_type">Type</label>
+
+                    <? if($blog_data){?>
+                        <select id="page_type" class="form-control" name="page_type" onChange="showField()">
+                        <option value='blog'>Blog</option>
+                        </select>
+                    <? }else{?>
                     <select id="page_type" class="form-control" name="page_type" onChange="showField()">
                     <option value=''>Tutorial</option>
                     <option value='blog'>Blog</option>
                     </select>
+                    <?php }?>
             </div>
             <div class="form-group name_div" >
                     <label for="name">Name</label>
@@ -87,7 +101,7 @@ while($row = $data->fetch_assoc()){
             <div class="form-group topic_name_div">
                     <label for="topic_name">Topic Name</label>
                     
-                    <select id="topic_name" class="form-control" name="topic_name" >
+                    <select id="topic_name" class="form-control" name="topic_name" onchange="getContents()">
                     <option value=''>Please Select</option>
                     </select>
             </div>
@@ -135,7 +149,7 @@ while($row = $data->fetch_assoc()){
                 $('.name_div').hide();
             }
         }
-        function getContent(){
+        function getContents(){
             var tutorial_name =$('#tutorial_list').val();
             var topic_name =$('#topic_name').val();
             $.ajax({
@@ -147,10 +161,10 @@ while($row = $data->fetch_assoc()){
                     },
                 url: "add-article-ajax.php",
                 success: function(data){
-                        $('#tutorial_list').val('');
-                        $('#topic_name').val('');
-                        $('#name').val('');
-                        tinyMCE.activeEditor.setContent('');
+                    debugger;
+                    tinyMCE.activeEditor.setContent('');
+                    var data = JSON.parse(data);
+                        tinyMCE.activeEditor.setContent(data);
                     },
             });
         }

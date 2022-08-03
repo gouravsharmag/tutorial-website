@@ -159,7 +159,7 @@ div.onlycontent {
             }?>
         <div class="col-md-4">
             <div class="blog_div">
-                <a style="text-decoration:none;"href="blog-content/<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>">
+                <a style="text-decoration:none;"href="add-article.php?blog=<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>">
             <h3 style="font-weight:bold;color:#000"><?php echo $blogs[$l]['blog_name'];?></h3>
             <div class="content-blog"><?php echo $blogs[$l]['content'];?></div>
             <div><span class="white-space-wrap">
