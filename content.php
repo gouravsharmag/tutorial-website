@@ -133,7 +133,7 @@ overflow-x: hidden;
     </div></div>
     <div class="mobilemenu" style="clear:both">
 
-    <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4=" data-push="1"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
+    
     </div>
     <!-- left bar -->
     <div id="menu">
@@ -176,32 +176,11 @@ overflow-x: hidden;
         </div>
         <?php $flag =0;$count++;$next = 1;}}}
         ?>
-    <div id="leftad" style="margin-left:20px">
-
-    <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad">
-    <script>
-            var adpushup = window.adpushup = window.adpushup || {};
-            adpushup.que = adpushup.que || [];
-            adpushup.que.push(function() {
-                adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
-            });
-        </script>
-    </div>
-    </div>
+   
     </div>
     <div class="onlycontent">
 
-    <div class="onlycontentad">
-    <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad">
-    <script>
-            var adpushup = window.adpushup = window.adpushup || {};
-            adpushup.que = adpushup.que || [];
-            adpushup.que.push(function() {
-                adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
-            });
-        </script>
-    </div>
-    </div>
+   
     <div class="onlycontentinner">
     <table style="width:100%;">
 <tbody><tr><td>
