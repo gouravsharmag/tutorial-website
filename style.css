@@ -12,3 +12,17 @@
     .bg-info .container{
         padding-bottom: 3rem;
     }
+    .ddsmoothmenu{
+        background-color: #4a4a4a !important;
+    }
+    .ddsmoothmenu ul li a{
+        background-color: #4a4a4a !important;
+    }
+    .ddsmoothmenu ul li a.selected, .ddsmoothmenu ul li a:hover{
+        color: #85f94c;
+    }
+    .content-blog{
+        
+    max-height: 39px;
+
+    }

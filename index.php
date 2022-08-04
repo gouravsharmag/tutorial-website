@@ -111,13 +111,13 @@ div.righthome {
     <div id="page" style="margin:-8px;background-color:#ffffff;"><div id="container"> <div class="header">
         <table style="width:100%;height: 6rem;background-color: #fff;"> 
         <tbody><tr> <td> 
-            <div style="clear:both;float:left;width:15rem;margin-top:1.6rem;margin-left:20px;font-size: 20px;color:#000000"> <a href="../" style="color:#000000;text-decoration:none;"><span style="background:red;padding: 3px 5px;border-radius: 50%;">A</span>pnaTutorial</a> </div> 
+            <div style="clear:both;float:left;width:15rem;margin-top:1.6rem;margin-left:20px;font-size: 20px;color:#000000"> <a href="../" style="color:#000000;text-decoration:none;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a> </div> 
             <!-- <div style="float:left;width:12rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;cursor:pointer;">Tutorials <i class="fa fa-caret-down" style="font-size: 20px; display: inline;"></i></div>  -->
-            <div style="float:left;width:3rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;">Blogs </a></div> 
+            <div style="float:left;width:3rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;font-weight:100;">Blogs </a></div> 
 </td></tr></tbody></table></div>
     <div class="headermobile">
     <div style="margin-top:10px;padding:0px;text-align:left;padding-top:0.5rem;">
-    <span style="float:left"><a href="index.php" style="color:#000000;text-decoration:none;padding-left: 1.5rem;"><span style="background:red;padding: 3px 5px;border-radius: 50%;">A</span>pnaTutorial</a></span> 
+    <span style="float:left"><a href="index.php" style="color:#000000;text-decoration:none;padding-left: 1.5rem;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a></span> 
     <span style="position: relative;right: 1rem;"><i class="fa-solid fa-bars" style="font-size: 30px;float: right;"></i></span>
 </div>
     <div style="margin:0px;padding:0px;clear:both">

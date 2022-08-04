@@ -72,11 +72,11 @@ while($row = $data->fetch_assoc()){
         <div class="form-group page_type_div">
                     <label for="page_type">Type</label>
 
-                    <? if($blog_data){?>
+                    <?php if($blog_data){?>
                         <select id="page_type" class="form-control" name="page_type" onChange="showField()">
                         <option value='blog'>Blog</option>
                         </select>
-                    <? }else{?>
+                    <?php }else{?>
                     <select id="page_type" class="form-control" name="page_type" onChange="showField()">
                     <option value=''>Tutorial</option>
                     <option value='blog'>Blog</option>
