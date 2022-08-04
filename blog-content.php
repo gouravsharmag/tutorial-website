@@ -39,7 +39,11 @@ while($row = $data->fetch_assoc()){
 ?>
 <html>
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="<?php echo $content[0]['meta_description'];?>">
+    <title><?php echo ucfirst("$topic");?></title>
+    <meta name="Keywords" content="<?php echo $content[0]['keywords'];?>">
     <link rel="stylesheet" type="text/css" href="../style.css" async="">
     <link rel="stylesheet" type="text/css" href="https://cdn.tiny.cloud/1/no-api-key/tinymce/6.0.3-5/skins/ui/oxide/content.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
