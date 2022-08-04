@@ -24,6 +24,7 @@ while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
 $topic = str_replace('-', ' ', strtolower($_GET['alias']));  
+$topic_title = $topic;
 $topic = substr($topic, strpos($topic, ' ') + 1);    
 $query="select * from post where topic_name='$topic'";
 $data=$conn->query($query);
@@ -34,7 +35,11 @@ while($row = $data->fetch_assoc()){
 ?>
 <html>
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="<?php echo $content[0]['meta_description'];?>">
+    <title><?php echo ucfirst("$topic_title");?></title>
+    <meta name="Keywords" content="<?php echo $content[0]['keywords'];?>">
     <link rel="stylesheet" type="text/css" href="../style.css" async="">
     <link rel="stylesheet" type="text/css" href="https://cdn.tiny.cloud/1/no-api-key/tinymce/6.0.3-5/skins/ui/oxide/content.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -200,6 +205,7 @@ overflow-x: hidden;
     <div class="onlycontentinner">
     <table style="width:100%;">
 <tbody><tr><td>
+<h1><?php echo ucfirst("$topic");?></h1>
 <div id="bottomnextup">
 <?php if($prev==0){ ?>
 <a class="next" href="<?php echo $prev_url_main;?>">← prev</a>

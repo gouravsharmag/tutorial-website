@@ -5,7 +5,9 @@ $conn=DbConnection();
 if($_POST['page_type']=='blog'){
     $name = $_POST['name'];
     $content = $_POST['article'];
-    $blog_insert_query = "INSERT INTO blog (blog_name, content, created_at) VALUES ('$name', '$content', NOW())";
+    $keywords = $_POST['keywords'];
+    $meta_description = $_POST['meta_description'];
+    $blog_insert_query = "INSERT INTO blog (blog_name, content, created_at,keywords,meta_description) VALUES ('$name', '$content', NOW(),'$keywords','$meta_description')";
     $conn->query($blog_insert_query);
     echo json_encode($name);
     exit;
@@ -25,7 +27,9 @@ if($_POST['type'] == 'save'){
     $topic_name = $_POST['topic_name'];
     $type = $_POST['type'];
     $description = $_POST['article'];
-    $insert_query = "INSERT INTO post (tutorial_name, topic_name, type,  description) VALUES ('$tutorial_name', '$topic_name', '$type', '$description')";
+    $keywords = $_POST['keyword'];
+    $meta_description = $_POST['meta_description'];
+    $insert_query = "INSERT INTO post (tutorial_name, topic_name, type,  description,keywords,meta_description) VALUES ('$tutorial_name', '$topic_name', '$type', '$description','$keyword','$meta_description')";
     $conn->query($insert_query);
 }
 else{

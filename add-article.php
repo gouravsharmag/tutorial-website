@@ -105,6 +105,14 @@ while($row = $data->fetch_assoc()){
                     <option value=''>Please Select</option>
                     </select>
             </div>
+            <div class="form-group name_div" >
+                    <label for="name">Keywords</label>
+                    <input type='text' id="keywords" class="form-control" name="keywords"/>
+            </div>
+            <div class="form-group name_div" >
+                    <label for="name">Meta Description</label>
+                    <input type='text' id="meta_description" class="form-control" name="meta_description"/>
+            </div>
             <textarea id="mytextarea"></textarea>
             <br><br>
             <button type="button" class="btn btn-primary" onClick="saveArticle()">Save</button>
@@ -173,14 +181,18 @@ while($row = $data->fetch_assoc()){
             var topic_name =$('#topic_name').val();
             var page_type =$('#page_type').val();
             var name =$('#name').val();
+            var keywords = $("#keywords").val();
+            var meta_description = $("#meta_description").val();
             var article = tinyMCE.activeEditor.getContent({format : 'raw'});
             $.ajax({
                 type: 'POST',
                 data: {
                         "tutorial_name" : tutorial_name,
                         "topic_name" : topic_name,
+                        "keywords":keywords,
                         "type" : "save",
                         "page_type" : page_type,
+                        "meta_description":meta_description,
                         "name" :name,
                         "article" : article
                     },

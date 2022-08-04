@@ -23,4 +23,8 @@
     }
     .content-blog{
         max-height: 39px;
+        overflow: hidden;
+    }
+    .content-blog p{
+        margin:0px
     }

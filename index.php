@@ -13,7 +13,7 @@ $category = array();
 while($row = $data->fetch_assoc()){
     $category[] = $row;
 }
-$query="select * from blog limit 10";
+$query="select id, blog_name, LEFT(content, 200)as content, created_at from blog limit 10";
 $data=$conn->query($query);
 $blogs = array();
 while($row = $data->fetch_assoc()){
@@ -22,7 +22,11 @@ while($row = $data->fetch_assoc()){
 ?>
 <html>
 <head>
+<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="ApnaTutorial is an online platform which is designed to learn new technologies with a highly interactive user interface.">
+    <title><?php echo ucfirst("$topic_title");?></title>
+    <meta name="Keywords" content="Apna tutorial, apnatutorial, Tutorials, Blogs,web development, programming, Data science,HTML,Javascript,Python,css,PHP,Website,Technology,learning,code,tips,Courses,MYSQL,Databases,C,Java">
     <link rel="stylesheet" type="text/css" href="style.css" async="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- jQuery library -->
