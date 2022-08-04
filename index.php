@@ -33,7 +33,7 @@ while($row = $data->fetch_assoc()){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
 .tutorial-name{
-    padding: 0.5rem 0 3rem;
+    padding: 0.5rem 0.5rem 3rem;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 2rem;
@@ -153,8 +153,8 @@ div.righthome {
     </div>
     <div class="onlycontentinner">
             <?php for($j=0;$j<count($category);$j++){?>
-                <div class="row" style="margin-bottom:3rem;">
-                <div style="background-color: #D9EEE1;display: flow-root;padding-left: 1rem;padding-bottom:2rem;">
+                <div class="row">
+                <div style="display: flow-root;padding-left: 1rem;padding-bottom:1rem;">
                 <h2 style="padding-left:1rem;"><?php echo $category[$j]['name'];?></h2>
                 <?php 
                 $category_id = $category[$j]['id'];
@@ -168,10 +168,10 @@ div.righthome {
                 <div class="col-md-4 col-lg-4" style="color:black;">
                     <div class="tutorial-name" style="background-color:<?php echo $tutorial[$i]['color'];?>;">
                         <h2 style="font-size:25px;font-weight:700"><?php echo $tutorial[$i]['name'];?></h2>
-                        <div style="height:40px;">
+                        <div style="height:50px;">
                             <h5 class="w3-text-dark-grey"><?php echo $tutorial[$i]['description'];?></h5>
                         </div>
-                        <a href="/tutorial-website/content/<?php echo $tutorial[$i]['home_link'];?>" class="w3-button tut-button black-color w3-margin-bottom">Learn <?php echo $tutorial[$i]['name'];?></a>
+                        <a href="/content/<?php echo $tutorial[$i]['home_link'];?>" class="w3-button tut-button black-color w3-margin-bottom">Learn <?php echo $tutorial[$i]['name'];?></a>
                     </div>
                 </div>
                 <?php }?>
