@@ -1,9 +1,9 @@
 <?php 
 function DbConnection(){
-    $servername = "localhost:3306";
-    $username = "u657940708_tutorial";
+    $servername = "localhost";
+    $username = "u657940708_user";
     $password = "Staging123$";
-    $db = "u657940708_tutorial";
+    $db = "u657940708_tutorial_web";
 
     // Create connection
     $DbConn = new mysqli($servername, $username, $password,$db);

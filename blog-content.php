@@ -1,8 +1,8 @@
 <?php 
- $servername = "localhost:3306";
- $username = "u657940708_tutorial";
- $password = "Staging123$";
- $db = "u657940708_tutorial";
+$servername = "localhost";
+$username = "u657940708_user";
+$password = "Staging123$";
+$db = "u657940708_tutorial_web";
  $url = explode("-", $_GET['alias'], 2);
  $name_blog = $url[0];
  // Create connection
