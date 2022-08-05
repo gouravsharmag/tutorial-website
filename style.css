@@ -44,3 +44,6 @@
     .content-blog{
         color: #777;
     }
+    #link{
+        z-index: 99;
+    }

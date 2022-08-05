@@ -149,7 +149,7 @@ div.onlycontent {
         <div class="col-md-8">
             <div class="blog_div">
                 <a style="text-decoration:none;"href="blog-content/<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>">
-            <h3 style="font-weight:bold;color:#000"><?php echo $blogs[$l]['blog_name'];?></h3>
+            <h3 style="font-weight:bold;"><?php echo $blogs[$l]['blog_name'];?></h3>
             <div class="content-blog"><?php echo $blogs[$l]['content'];?></div>
             <div><span class="white-space-wrap">
 				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
