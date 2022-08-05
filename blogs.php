@@ -7,7 +7,7 @@ $tutorial_name = array();
 while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
-$query="select id, blog_name, LEFT(content, 300)as content, created_at from blog limit 10";
+$query="select id, blog_name, LEFT(content, 300)as content,content_text created_at from blog limit 10";
 $data=$conn->query($query);
 $blogs = array();
 while($row = $data->fetch_assoc()){
@@ -107,7 +107,8 @@ div.onlycontent {
 <body>
 
     <button onclick="topFunction()" id="myBtn">⇧ TOP</button>
-    <div id="page" style="margin:-8px;background-color:#ffffff;"><div id="container"> <div class="header">
+    <div id="page" style="margin:-8px;background-color:#ffffff;">
+    <div id="container"> <div class="header">
         <table style="width:100%;height: 6rem;background-color: #fff;"> 
         <tbody><tr> <td> 
             <div style="clear:both;float:left;width:15rem;margin-top:1.6rem;margin-left:20px;font-size: 20px;color:#000000"> <a href="index.php" style="color:#000000;text-decoration:none;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a> </div> 
@@ -149,20 +150,21 @@ div.onlycontent {
         <div class="col-md-8">
             <div class="blog_div">
                 <a style="text-decoration:none;"href="blog-content/<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>">
-            <h3 style="font-weight:bold;"><?php echo $blogs[$l]['blog_name'];?></h3>
-            <div class="content-blog"><?php echo $blogs[$l]['content'];?></div>
-            <div><span class="white-space-wrap">
-				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
-                </span>
-                <span class="time-blog">
-                    <svg class="star-15px_svg__svgIcon-use" width="15" height="15" viewBox="0 0 15 15">
-                        <path d="M7.44 2.32c.03-.1.09-.1.12 0l1.2 3.53a.29.29 0 0 0 .26.2h3.88c.11 0 .13.04.04.1L9.8 8.33a.27.27 0 0 0-.1.29l1.2 3.53c.03.1-.01.13-.1.07l-3.14-2.18a.3.3 0 0 0-.32 0L4.2 12.22c-.1.06-.14.03-.1-.07l1.2-3.53a.27.27 0 0 0-.1-.3L2.06 6.16c-.1-.06-.07-.12.03-.12h3.89a.29.29 0 0 0 .26-.19l1.2-3.52z">
-                        </path>
-                    </svg>
-                </span>
+                    <h3 style="font-weight:bold;"><?php echo $blogs[$l]['blog_name'];?></h3>
+                    <div class="content-blog"><?php echo $blogs[$l]['content_text'];?></div>
+                    <div>
+                        <span class="white-space-wrap">
+                        <span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
+                        </span>
+                        <span class="time-blog">
+                            <svg class="star-15px_svg__svgIcon-use" width="15" height="15" viewBox="0 0 15 15">
+                                <path d="M7.44 2.32c.03-.1.09-.1.12 0l1.2 3.53a.29.29 0 0 0 .26.2h3.88c.11 0 .13.04.04.1L9.8 8.33a.27.27 0 0 0-.1.29l1.2 3.53c.03.1-.01.13-.1.07l-3.14-2.18a.3.3 0 0 0-.32 0L4.2 12.22c-.1.06-.14.03-.1-.07l1.2-3.53a.27.27 0 0 0-.1-.3L2.06 6.16c-.1-.06-.07-.12.03-.12h3.89a.29.29 0 0 0 .26-.19l1.2-3.52z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
             </div>
-        </a>
-        </div>
         </div>
         <?php 
     }?>
@@ -175,6 +177,7 @@ div.onlycontent {
                 <section class="mb-0"><br><p><b>ApnaTutorial</b> is an online platform which is designed to learn new technologies with a highly interactive user interface.</p></section><section class=""><div class="row foot"><div class="col-lg-3 col-md-6 mb-1 mb-md-0">
                     <ul class="list-unstyled mb-0"><li><a class="foot-link" href="/about" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/privacy" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/contact" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
                     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="">ApnaTutorial</a></div>
+    </div>
     </div>
     <script>
         function showmenu(){

@@ -7,7 +7,8 @@ if($_POST['page_type']=='blog'){
     $content = $_POST['article'];
     $keywords = $_POST['keywords'];
     $meta_description = $_POST['meta_description'];
-    $blog_insert_query = "INSERT INTO blog (blog_name, content, created_at,keywords,meta_description) VALUES ('$name', '$content', NOW(),'$keywords','$meta_description')";
+    $plain_text = $_POST['plain_text'];
+    $blog_insert_query = "INSERT INTO blog (blog_name, content, created_at,keywords,meta_description,content_text) VALUES ('$name', '$content', NOW(),'$keywords','$meta_description','$plain_text')";
     $conn->query($blog_insert_query);
     echo json_encode($name);
     exit;

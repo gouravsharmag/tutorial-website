@@ -7,7 +7,7 @@ $tutorial_name = array();
 while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
-$query="select * from blog limit 10";
+$query="select id, blog_name, LEFT(content, 300)as content,content_text created_at from blog limit 10";
 $data=$conn->query($query);
 $blogs = array();
 while($row = $data->fetch_assoc()){
@@ -150,7 +150,7 @@ div.onlycontent {
             <div class="blog_div">
                 <a style="text-decoration:none;"href="add-article.php?blog=<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>">
             <h3 style="font-weight:bold;color:#000"><?php echo $blogs[$l]['blog_name'];?></h3>
-            <div class="content-blog"><?php echo $blogs[$l]['content'];?></div>
+            <div class="content-blog"><?php echo $blogs[$l]['content_text'];?></div>
             <div><span class="white-space-wrap">
 				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
                 </span>

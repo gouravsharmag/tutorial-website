@@ -184,6 +184,7 @@ while($row = $data->fetch_assoc()){
             var keywords = $("#keywords").val();
             var meta_description = $("#meta_description").val();
             var article = tinyMCE.activeEditor.getContent({format : 'raw'});
+            var plain_text = tinyMCE.activeEditor.getContent({format: 'text'});
             $.ajax({
                 type: 'POST',
                 data: {
@@ -194,7 +195,8 @@ while($row = $data->fetch_assoc()){
                         "page_type" : page_type,
                         "meta_description":meta_description,
                         "name" :name,
-                        "article" : article
+                        "article" : article,
+                        "plain_text":plain_text
                     },
                 url: "add-article-ajax.php",
                 success: function(data){
