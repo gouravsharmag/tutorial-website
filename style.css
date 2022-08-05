@@ -28,3 +28,19 @@
     .content-blog p{
         margin:0px
     }
+    .bg-info {
+        width: 100%;
+        display: flow-root;
+        font-size: 17px;
+    }
+    .content-div h3{
+        font-weight: 500 !important;
+    font-size: 20px;
+    font-family: system-ui;
+    }
+    .content-year{
+        color: #777;
+    }
+    .content-blog{
+        color: #777;
+    }

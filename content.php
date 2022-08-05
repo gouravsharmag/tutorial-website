@@ -109,8 +109,8 @@ overflow-x: hidden;
 </td></tr></tbody></table></div>
     <div class="headermobile">
     <div style="margin-top:10px;padding:0px;text-align:left;padding-top:0.5rem;">
-    <span style="float:left"><a href="index.php" style="color:#000000;text-decoration:none;padding-left: 1.5rem;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a></span> 
-    <span style="position: relative;right: 1rem;" onclick="showmenu()"><i class="fa-solid fa-bars" style="font-size: 30px;float: right;"></i></span>
+    <span style="float:left;padding-top:2px;"><a href="index.php" style="color:#000000;text-decoration:none;padding-left: 1.5rem;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a></span> 
+    <span style="position: relative;right: 1.5rem;bottom: 2.5px;" onclick="showmenu()"><i class="fa-solid fa-bars" style="font-size: 30px;float: right;"></i></span>
 </div>
     <div style="margin:0px;padding:0px;clear:both">
     </div>

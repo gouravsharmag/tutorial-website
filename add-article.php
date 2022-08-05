@@ -198,9 +198,12 @@ while($row = $data->fetch_assoc()){
                     },
                 url: "add-article-ajax.php",
                 success: function(data){
+                    alert("Data is saved successfully");
                         $('#tutorial_list').val('');
                         $('#topic_name').val('');
                         $('#name').val('');
+                        $('#keywords').val('');
+                        $('#meta_description').val('');
                         tinyMCE.activeEditor.setContent('');
                     },
             });

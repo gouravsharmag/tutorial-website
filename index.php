@@ -25,7 +25,7 @@ while($row = $data->fetch_assoc()){
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="ApnaTutorial is an online platform which is designed to learn new technologies with a highly interactive user interface.">
-    <title><?php echo ucfirst("$topic_title");?></title>
+    <title>ApnaTutorial</title>
     <meta name="Keywords" content="Apna tutorial, apnatutorial, Tutorials, Blogs,web development, programming, Data science,HTML,Javascript,Python,css,PHP,Website,Technology,learning,code,tips,Courses,MYSQL,Databases,C,Java">
     <link rel="stylesheet" type="text/css" href="style.css" async="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -121,8 +121,8 @@ div.righthome {
 </td></tr></tbody></table></div>
     <div class="headermobile">
     <div style="margin-top:10px;padding:0px;text-align:left;padding-top:0.5rem;">
-    <span style="float:left"><a href="index.php" style="color:#000000;text-decoration:none;padding-left: 1.5rem;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a></span> 
-    <span style="position: relative;right: 1rem;"><i class="fa-solid fa-bars" style="font-size: 30px;float: right;"></i></span>
+    <span style="float:left;padding-top:2px;"><a href="index.php" style="color:#000000;text-decoration:none;padding-left: 1.5rem;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a></span> 
+    <span style="position: relative;right: 1.5rem;bottom: 2.5px;"><i class="fa-solid fa-bars" style="font-size: 30px;float: right;"></i></span>
 </div>
     <div style="margin:0px;padding:0px;clear:both">
     </div>
@@ -178,12 +178,14 @@ div.righthome {
                 </div>
     <div class="righthome">
         <h1 class="bloghead">Blogs</h1>
-        <?php for($l=0;$l<count($blogs);$l++){?>
-        <div>
-            <a href="blog-content/<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>" style="text-decoration:none">
+        <?php for($l=0;$l<count($blogs);$l++){
+            $url = str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>
+        <div class="content-div">
+            <a href="blog-content/<?php echo $url;?>" style="text-decoration:none">
             <h3 style="font-weight:bold;"><?php echo $blogs[$l]['blog_name'];?></h3>
             <div class="content-blog"><?php echo $blogs[$l]['content'];?></div>
-            <div><span class="white-space-wrap">
+            <div>
+                <span class="white-space-wrap">
 				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
                 </span>
                 <span class="time-blog">
@@ -193,9 +195,9 @@ div.righthome {
                     </svg>
                 </span>
             </div>
-        </a>
+            </a>
         </div>
-        <hr>
+        </hr>
         <?php }?>
 
     </div>
@@ -206,6 +208,7 @@ div.righthome {
                     <ul class="list-unstyled mb-0"><li><a class="foot-link" href="about.php" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="privacy.php" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="contact.php" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
                     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="">ApnaTutorial</a></div>
     </div>
+        </div>
     <script>
         function showmenu(){
             $("#menu").show();

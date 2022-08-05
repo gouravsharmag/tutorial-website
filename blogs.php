@@ -97,7 +97,7 @@ div.onlycontent {
 .blog_div{
     border-bottom: 1px solid #b7a9a9;
     margin: 0% 1%;
-    height: 11rem;
+    height: 9rem;
 }
 #container{
     background: #fff;
@@ -115,12 +115,11 @@ div.onlycontent {
             <div style="float:left;width:3rem;margin-top:1.6rem;margin-left:20px;color:black;font-weight:bold;font-size:20px;"> <a href="blogs.php" style="color:#000;text-decoration:none;font-weight:100;">Blogs </a></div> 
 </td></tr></tbody></table></div>
     <div class="headermobile">
-    <div style="margin-top:10px;padding:0px;text-align:left;">
-    <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span>
-    <span style="float:left"><a href="index.php" style="color:#000000;text-decoration:none;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a></span>
-    </div>
+    <div style="margin-top:10px;padding:0px;text-align:left;padding-top:0.5rem;">
+    <span style="float:left;padding-top:2px;"><a href="index.php" style="color:#000000;text-decoration:none;padding-left: 1.5rem;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a></span> 
+    <span style="position: relative;right: 1.5rem;bottom: 2.5px;"><i class="fa-solid fa-bars" style="font-size: 30px;float: right;"></i></span>
+</div>
     <div style="margin:0px;padding:0px;clear:both">
-   
     </div>
     </div>
     <div id="link" style="clear:both"> <div class="ddsmoothmenu" style="z-index: 99;">
@@ -147,7 +146,7 @@ div.onlycontent {
             if($l%3==0){
                 echo   '</div><div class="row">' ; 
             }?>
-        <div class="col-md-4">
+        <div class="col-md-8">
             <div class="blog_div">
                 <a style="text-decoration:none;"href="blog-content/<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>">
             <h3 style="font-weight:bold;color:#000"><?php echo $blogs[$l]['blog_name'];?></h3>
@@ -173,8 +172,8 @@ div.onlycontent {
     <div class="bg-info text-center text-white">
         <div class="container p-4">
             <span class="f-twitter">
-                <section class="mb-0"><br><p>ApnaTutorial is an open platform. If you want learn something.</p></section><section class=""><div class="row foot"><div class="col-lg-3 col-md-6 mb-1 mb-md-0">
-                    <ul class="list-unstyled mb-0"><li><a class="foot-link" href="/about" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/privacy" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/faq" style="display: inherit;">FAQ</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/contact" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
+                <section class="mb-0"><br><p><b>ApnaTutorial</b> is an online platform which is designed to learn new technologies with a highly interactive user interface.</p></section><section class=""><div class="row foot"><div class="col-lg-3 col-md-6 mb-1 mb-md-0">
+                    <ul class="list-unstyled mb-0"><li><a class="foot-link" href="/about" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/privacy" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="/contact" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
                     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="https://fastcodesolution.com/">ApnaTutorial</a></div>
     </div>
     <script>
