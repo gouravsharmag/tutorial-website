@@ -1,3 +1,5 @@
 RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.apnatutorial.com$
+RewriteRule ^(.*)$ https://www.apnatutorial.com/$1 [R=301,L]
 RewriteRule ^([^/\.]+)/([^/\.]+)?$ $1.php?type=$1&alias=$2
 RewriteRule ^([^/\.]+)/([^/\.]+)?$ blog-content.php?type=$1&alias=$2

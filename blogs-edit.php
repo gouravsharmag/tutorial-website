@@ -14,7 +14,8 @@ while($row = $data->fetch_assoc()){
     $blogs[] = $row;
 }
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css" async="">
