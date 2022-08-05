@@ -284,8 +284,8 @@ div.righthome {
 <div>
     <img alt="" class="imgPost" src="https://www.inventeducation.com/wp-content/uploads/avatars/16/6095986ed3627-bpthumb.png">&nbsp;&nbsp;&nbsp;
 </div>
-<div><a class="prof-link" href="/profile/61422a65e4493600165ff3d1" style="display: inherit;">
-<span style="color: rgb(219, 65, 119);">Satyam Tyagi</span>&nbsp;&nbsp;</a>
+<div>
+<span style="color: rgb(219, 65, 119);">Satyam Tyagi</span>&nbsp;&nbsp;
 <span style="position: relative;top: 10px;display:block;">Sept 15, 2021</span>
 </div>
 <!-- <div class="socializer sr-popup sr-40px sr-circle sr-opacity sr-pad sr-count-1">
@@ -314,11 +314,12 @@ div.righthome {
     <div class="righthome">
         <h1 class="bloghead">Blogs</h1>
         <?php for($l=0;$l<count($blogs);$l++){?>
-        <div>
+        <div class="content-div">
             <a href="<?php echo str_replace(' ', '-', strtolower($blogs[$l]['blog_name']));?>" style="text-decoration:none">
             <h3 style="font-weight:bold;"><?php echo $blogs[$l]['blog_name'];?></h3>
             <div class="content-blog"><?php echo $blogs[$l]['content_text'];?></div>
-            <div><span class="white-space-wrap">
+            <div>
+                <span class="white-space-wrap">
 				<span class="metropolis-regular-font-family fs13 line-height-20px color-hex-seven custom-font-weight-normal">1 year ago</span>
                 </span>
                 <span class="time-blog">
