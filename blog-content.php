@@ -253,9 +253,9 @@ div.righthome {
         $arr = explode("-", $tutorial, 2);
         $first = $arr[0];
         if($first == $name_tutorial){?>
-    <li><a class ="selected" href="<?php echo $tutorial_name[$i]['home_link'];?>"><?php echo $tutorial_name[$i]['name'];?></a>
+    <li><a class ="selected" href="/content/<?php echo $tutorial_name[$i]['home_link'];?>"><?php echo $tutorial_name[$i]['name'];?></a>
 <?php } else{?>
-    <li><a href="<?php echo $tutorial_name[$i]['home_link'];?>"><?php echo $tutorial_name[$i]['name'];?></a>
+    <li><a href="/content/<?php echo $tutorial_name[$i]['home_link'];?>"><?php echo $tutorial_name[$i]['name'];?></a>
     <?php }}?>
     </li>
     </ul>
