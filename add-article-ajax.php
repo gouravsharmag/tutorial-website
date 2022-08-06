@@ -31,7 +31,7 @@ if($_POST['type'] == 'save'){
     $keywords = $_POST['keyword'];
     $meta_description = $_POST['meta_description'];
     $query = "select * from post where topic_name='$topic_name' and tutorial_name='$tutorial_name'";
-    if($conn->query($query)>0){
+    if($conn->query($query)->num_rows>0){
         $update_query = "update post set description='$description', keywords='$keywords', meta_description='$meta_description'";
         $conn->query($update_query);
     }else{
