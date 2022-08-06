@@ -275,8 +275,8 @@ div.righthome {
 
    
     <div class="onlycontentinner">
-    <table style="width:100%;">
-<tbody><tr><td>
+    <!-- <table style="width:100%;">
+<tbody><tr><td> -->
 <!-- <div id="bottomnextup">
 
 </div> -->
@@ -309,7 +309,7 @@ div.righthome {
 <br><br>
 <!--  -->
 <br><br>
-</td></tr></tbody></table>
+<!-- </td></tr></tbody></table> -->
     </div>
         </div>
     <div class="righthome">
