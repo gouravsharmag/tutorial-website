@@ -17,7 +17,7 @@ $conn = new mysqli($servername, $username, $password,$db);
 // while($row = $data->fetch_assoc()){
 //     $tutorial_list[] = $row;
 // }
-$query="select id, blog_name, LEFT(content, 200)as content,content_text created_at from blog limit 10";
+$query="select id, blog_name, LEFT(content, 200)as content,content_text, created_at from blog limit 10";
 $data=$conn->query($query);
 $blogs = array();
 while($row = $data->fetch_assoc()){

@@ -7,7 +7,7 @@ $tutorial_name = array();
 while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
-$query="select id, blog_name, LEFT(content, 300)as content,content_text created_at from blog limit 10";
+$query="select id, blog_name, LEFT(content, 300)as content,content_text, created_at from blog limit 10";
 $data=$conn->query($query);
 $blogs = array();
 while($row = $data->fetch_assoc()){
