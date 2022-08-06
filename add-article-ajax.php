@@ -4,10 +4,11 @@ include "connection.php";
 $conn=DbConnection();
 if($_POST['page_type']=='blog'){
     $name = $_POST['name'];
-    $content = $_POST['article'];
+    $content = htmlspecialchars($_POST['article'],ENT_QUOTES);
     $keywords = $_POST['keywords'];
     $meta_description = $_POST['meta_description'];
-    $plain_text = $_POST['plain_text'];
+    $plain_text = htmlspecialchars($_POST['plain_text'],ENT_QUOTES);
+    
     $blog_insert_query = "INSERT INTO blog (blog_name, content, created_at,keywords,meta_description,content_text) VALUES ('$name', '$content', NOW(),'$keywords','$meta_description','$plain_text')";
     $conn->query($blog_insert_query);
     echo json_encode($name);
