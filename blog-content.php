@@ -300,7 +300,7 @@ div.righthome {
 </div> -->
 </div>
 <br>
-<?php echo $content[0]['content'];?>
+<?php echo htmlspecialchars_decode($content[0]['content']);?>
 <!-- <h4 class="n">NOTE: It is recommended to write all tags in lower-case for consistency, readability, etc.</h4> -->
 <!-- <div class="nexttopicdiv">
 <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="html-text-editors">HTML text Editors</a></span>
