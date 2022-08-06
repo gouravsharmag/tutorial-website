@@ -193,7 +193,7 @@ overflow-x: hidden;
 <a class="next" href="<?php echo $next_url?>">next →</a>
 <?php } ?>
 </div>
-<?php echo $content[0]['description'];?>
+<?php echo htmlspecialchars_decode($content[0]['description']);?>
 <!-- <h4 class="n">NOTE: It is recommended to write all tags in lower-case for consistency, readability, etc.</h4> -->
 <!-- <div class="nexttopicdiv">
 <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="html-text-editors">HTML text Editors</a></span>

@@ -105,11 +105,11 @@ while($row = $data->fetch_assoc()){
                     <option value=''>Please Select</option>
                     </select>
             </div>
-            <div class="form-group name_div" >
+            <div class="form-group" >
                     <label for="name">Keywords</label>
                     <input type='text' id="keywords" class="form-control" name="keywords"/>
             </div>
-            <div class="form-group name_div" >
+            <div class="form-group" >
                     <label for="name">Meta Description</label>
                     <input type='text' id="meta_description" class="form-control" name="meta_description"/>
             </div>

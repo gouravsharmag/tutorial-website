@@ -8,7 +8,6 @@ if($_POST['page_type']=='blog'){
     $keywords = $_POST['keywords'];
     $meta_description = $_POST['meta_description'];
     $plain_text = htmlspecialchars($_POST['plain_text'],ENT_QUOTES);
-    
     $blog_insert_query = "INSERT INTO blog (blog_name, content, created_at,keywords,meta_description,content_text) VALUES ('$name', '$content', NOW(),'$keywords','$meta_description','$plain_text')";
     $conn->query($blog_insert_query);
     echo json_encode($name);
@@ -21,18 +20,24 @@ if($_POST['type']=='getContent'){
     $tutorial_query = $conn->query($tutorial_query);
     $tutorial_data = $tutorial_query->fetch_assoc();
     $tutorial_data = $tutorial_data['description'];
-    echo json_encode($tutorial_data);
+    echo json_encode(htmlspecialchars_decode($tutorial_data));
     exit;
 }
 if($_POST['type'] == 'save'){
     $tutorial_name = $_POST['tutorial_name'];
     $topic_name = $_POST['topic_name'];
     $type = $_POST['type'];
-    $description = $_POST['article'];
+    $description = htmlspecialchars($_POST['article']);
     $keywords = $_POST['keyword'];
     $meta_description = $_POST['meta_description'];
-    $insert_query = "INSERT INTO post (tutorial_name, topic_name, type,  description,keywords,meta_description) VALUES ('$tutorial_name', '$topic_name', '$type', '$description','$keyword','$meta_description')";
-    $conn->query($insert_query);
+    $query = "select * from post where topic_name='$topic_name' and tutorial_name='$tutorial_name'";
+    if($conn->query($query)>0){
+        $update_query = "update post set description='$description', keywords='$keywords', meta_description='$meta_description'";
+        $conn->query($update_query);
+    }else{
+        $insert_query = "INSERT INTO post (tutorial_name, topic_name, type,  description,keywords,meta_description) VALUES ('$tutorial_name', '$topic_name', '$type', '$description','$keyword','$meta_description')";
+        $conn->query($insert_query);
+    }
 }
 else{
     $query="select * from tutorial_list where type!='heading' and tutorial_id='$id'";
