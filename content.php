@@ -183,8 +183,6 @@ overflow-x: hidden;
 
    
     <div class="onlycontentinner">
-    <table style="width:100%;">
-<tbody><tr><td>
 <h1><?php echo ucfirst("$topic");?></h1>
 <div id="bottomnextup">
 <?php if($prev==0){ ?>
@@ -208,7 +206,6 @@ overflow-x: hidden;
 <?php } ?>
 </div>
 <br><br>
-</td></tr></tbody></table>
     </div>
     <script>
         var show =1;
