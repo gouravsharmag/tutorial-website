@@ -35,7 +35,7 @@ if($_POST['type'] == 'save'){
         $update_query = "update post set description='$description', keywords='$keywords', meta_description='$meta_description' where topic_name='$topic_name' and tutorial_name='$tutorial_name'";
         $conn->query($update_query);
     }else{
-        $insert_query = "INSERT INTO post (tutorial_name, topic_name, type,  description,keywords,meta_description) VALUES ('$tutorial_name', '$topic_name', '$type', '$description','$keyword','$meta_description')";
+        $insert_query = "INSERT INTO post (tutorial_name, topic_name, type,  description,keywords,meta_description) VALUES ('$tutorial_name', '$topic_name', '$type', '$description','$keywords','$meta_description')";
         $conn->query($insert_query);
     }
 }
