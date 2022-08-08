@@ -16,11 +16,11 @@ if($_POST['page_type']=='blog'){
 if($_POST['type']=='getContent'){
     $tutorial_name = $_POST['tutorial_name'];
     $topic_name = $_POST['topic_name'];
-    $tutorial_query = "SELECT description FROM post WHERE tutorial_name = '$tutorial_name' and topic_name='$topic_name'";
+    $tutorial_query = "SELECT description,keywords,meta_description FROM post WHERE tutorial_name = '$tutorial_name' and topic_name='$topic_name'";
     $tutorial_query = $conn->query($tutorial_query);
     $tutorial_data = $tutorial_query->fetch_assoc();
-    $tutorial_data = $tutorial_data['description'];
-    echo json_encode(htmlspecialchars_decode($tutorial_data));
+    $tutorial_data['description'] = htmlspecialchars_decode($tutorial_data['description']);
+    echo json_encode($tutorial_data);
     exit;
 }
 if($_POST['type'] == 'save'){
@@ -28,7 +28,7 @@ if($_POST['type'] == 'save'){
     $topic_name = $_POST['topic_name'];
     $type = $_POST['type'];
     $description = htmlspecialchars($_POST['article'],ENT_QUOTES);
-    $keywords = $_POST['keyword'];
+    $keywords = $_POST['keywords'];
     $meta_description = $_POST['meta_description'];
     $query = "select * from post where topic_name='$topic_name' and tutorial_name='$tutorial_name'";
     if($conn->query($query)->num_rows>0){

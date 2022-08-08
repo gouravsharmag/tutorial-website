@@ -172,7 +172,9 @@ while($row = $data->fetch_assoc()){
                     debugger;
                     tinyMCE.activeEditor.setContent('');
                     var data = JSON.parse(data);
-                        tinyMCE.activeEditor.setContent(data);
+                        tinyMCE.activeEditor.setContent(data['description']);
+                        $('#keywords').val(data['keywords']);
+                        $('#meta_description').val(data['meta_description']);
                     },
             });
         }
