@@ -47,3 +47,33 @@
     #link{
         z-index: 99;
     }
+    body{
+        font-family: system-ui,-webkit-pictograph !important;
+        color: #000;
+    }
+    #bottomnextup a:hover {
+        font: 14px/1.5 times new roman;
+        background-color: #f3f1f1;
+        padding: 6px 25px;
+        color: #000;
+        font-weight: 700;
+        text-decoration: none;
+        margin-left: 7px;
+        -moz-box-shadow: 6px 6px 4px #d4d4d4;
+        -webkit-box-shadow: 6px 6px 4px #d4d4d4;
+        box-shadow: 6px 6px 4px #d4d4d4;
+        text-transform: capitalize;
+    }
+    #bottomnextup a {
+        font: 14px/1.5 times new roman;
+        background-color: #fff;
+        float: right;
+        padding: 6px 25px;
+        color: #000;
+        border: 1px solid #a89e9e;
+        font-weight: 700;
+        text-decoration: none;
+        margin-left: 7px;
+        text-transform: capitalize;
+        border-radius: 20px;
+    }
