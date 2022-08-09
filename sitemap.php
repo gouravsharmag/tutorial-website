@@ -15,7 +15,7 @@ $sitemapText = '<?xml version="1.0" encoding="UTF-8"?>
 $sql = "SELECT name,topic_name FROM `post` join tutorial on post.tutorial_name=tutorial.id;";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()){
-    $topic = str_replace('-', ' ', strtolower($row['topic_name']));  
+    $topic = str_replace(' ', '-', strtolower($row['topic_name']));  
     $sitemapText .= ' <url>
                     <loc>'.$actual_link."/content/".$row['name'].'-'.$topic.'</loc>
                     <changefreq>daily</changefreq>
@@ -25,7 +25,7 @@ while($row = $result->fetch_assoc()){
 $sql = "SELECT blog_name FROM `blog`";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()){
-    $topic = str_replace('-', ' ', strtolower($row['blog_name']));  
+    $topic = str_replace(' ', '-', strtolower($row['blog_name']));  
     $sitemapText .= ' <url>
                     <loc>'.$actual_link."/content/".$topic.'</loc>
                     <changefreq>daily</changefreq>
