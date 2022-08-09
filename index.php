@@ -24,6 +24,16 @@ while($row = $data->fetch_assoc()){
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K83LNDKS4F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K83LNDKS4F');
+</script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="ApnaTutorial is an online platform which is designed to learn new technologies with a highly interactive user interface.">
     <title>ApnaTutorial</title>
