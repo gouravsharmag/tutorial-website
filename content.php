@@ -190,12 +190,7 @@ overflow-x: hidden;
 <?php } if($next==1){ ?>
 <a class="next" href="<?php echo $next_url?>">next →</a>
 <?php } ?>
-<br>
-<br>
-<p><span style="color: rgb(6, 203, 6);" data-mce-style="color: rgb(6, 203, 6);">If you have any queries or suggestions then please mail us to</span>&nbsp;<a href="mailto:queries@apnatutorial.com" data-mce-href="mailto:queries@apnatutorial.com">
-    <span style="color: rgb(224, 62, 45);" data-mce-style="color: rgb(224, 62, 45);">queries@apnatutorial.com</span></a>
-    <span style="color: rgb(6, 203, 6);" data-mce-style="color: rgb(6, 203, 6);">. Would love to hear any response from you to make ApnaTutorial better.</span>
-</p>
+
 </div>
 <?php echo htmlspecialchars_decode($content[0]['description']);?>
 <!-- <h4 class="n">NOTE: It is recommended to write all tags in lower-case for consistency, readability, etc.</h4> -->
@@ -212,6 +207,10 @@ overflow-x: hidden;
 <?php } ?>
 </div>
 <br><br>
+<p><span style="color: rgb(6, 203, 6);" data-mce-style="color: rgb(6, 203, 6);">If you have any queries or suggestions then please mail us to</span>&nbsp;<a href="mailto:queries@apnatutorial.com" data-mce-href="mailto:queries@apnatutorial.com">
+    <span style="color: rgb(224, 62, 45);" data-mce-style="color: rgb(224, 62, 45);">queries@apnatutorial.com</span></a>
+    <span style="color: rgb(6, 203, 6);" data-mce-style="color: rgb(6, 203, 6);">. Would love to hear any response from you to make ApnaTutorial better.</span>
+</p>
     </div>
     <script>
         var show =1;
