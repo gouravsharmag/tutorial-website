@@ -27,6 +27,7 @@ while($row = $data->fetch_assoc()){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="ApnaTutorial is an online platform which is designed to learn new technologies with a highly interactive user interface.">
     <title>ApnaTutorial</title>
+    <meta name="google-site-verification" content="AcSLi73S8pGgjoyHDsYNtHgz7Ac6ZTOjE2hLtpZWx0U" />
     <meta name="Keywords" content="Apna tutorial, apnatutorial, Tutorials, Blogs,web development, programming, Data science,HTML,Javascript,Python,css,PHP,Website,Technology,learning,code,tips,Courses,MYSQL,Databases,C,Java">
     <link rel="stylesheet" type="text/css" href="style.css" async="">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
