@@ -77,3 +77,9 @@
         text-transform: capitalize;
         border-radius: 20px;
     }
+    .feedback{
+        background: #e5ebef;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 2rem;
+    }
