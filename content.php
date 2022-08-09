@@ -183,7 +183,7 @@ overflow-x: hidden;
 
    
     <div class="onlycontentinner">
-<h1><?php echo $topic;?></h1>
+<h1><?php echo $content['topic_name'];?></h1>
 <div id="bottomnextup">
 <?php if($prev==0){ ?>
 <a class="next" href="<?php echo $prev_url_main;?>">← prev</a>
