@@ -207,9 +207,9 @@ overflow-x: hidden;
 <?php } ?>
 </div>
 <br><br>
-<p><span style="color: rgb(6, 203, 6);" data-mce-style="color: rgb(6, 203, 6);">If you have any queries or suggestions then please mail us to</span>&nbsp;<a href="mailto:queries@apnatutorial.com" data-mce-href="mailto:queries@apnatutorial.com">
+<p class="feedback"><span style="color: rgb(165 154 13);" data-mce-style="color: rgb(165 154 13);">If you have any queries or suggestions then please mail us to</span>&nbsp;<a href="mailto:queries@apnatutorial.com" data-mce-href="mailto:queries@apnatutorial.com">
     <span style="color: rgb(224, 62, 45);" data-mce-style="color: rgb(224, 62, 45);">queries@apnatutorial.com</span></a>
-    <span style="color: rgb(6, 203, 6);" data-mce-style="color: rgb(6, 203, 6);">. Would love to hear any response from you to make ApnaTutorial better.</span>
+    <span style="color: rgb(165 154 13);" data-mce-style="color: rgb(165 154 13);">. Would love to hear any response from you to make ApnaTutorial better.</span>
 </p>
     </div>
     <script>
