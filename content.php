@@ -183,13 +183,19 @@ overflow-x: hidden;
 
    
     <div class="onlycontentinner">
-<h1><?php echo ucfirst("$topic");?></h1>
+<h1><?php echo $topic;?></h1>
 <div id="bottomnextup">
 <?php if($prev==0){ ?>
 <a class="next" href="<?php echo $prev_url_main;?>">← prev</a>
 <?php } if($next==1){ ?>
 <a class="next" href="<?php echo $next_url?>">next →</a>
 <?php } ?>
+<br>
+<br>
+<p><span style="color: rgb(6, 203, 6);" data-mce-style="color: rgb(6, 203, 6);">If you have any queries or suggestions then please mail us to</span>&nbsp;<a href="mailto:queries@apnatutorial.com" data-mce-href="mailto:queries@apnatutorial.com">
+    <span style="color: rgb(224, 62, 45);" data-mce-style="color: rgb(224, 62, 45);">queries@apnatutorial.com</span></a>
+    <span style="color: rgb(6, 203, 6);" data-mce-style="color: rgb(6, 203, 6);">. Would love to hear any response from you to make ApnaTutorial better.</span>
+</p>
 </div>
 <?php echo htmlspecialchars_decode($content[0]['description']);?>
 <!-- <h4 class="n">NOTE: It is recommended to write all tags in lower-case for consistency, readability, etc.</h4> -->
