@@ -43,7 +43,7 @@ while($row = $data->fetch_assoc()){
         plugins: [
           'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
           'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
-          'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount','codesample'
+          'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount','codesample','codesample code','code'
         ],
         codesample_languages: [
             {text: 'HTML/XML', value: 'markup'},
@@ -60,7 +60,7 @@ while($row = $data->fetch_assoc()){
         ],
         toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
-          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help |codesample |code'
+          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help |codesample |code |codesample code'
         ,content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
       });
     </script>
