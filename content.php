@@ -96,6 +96,16 @@ h1 {
 body{
 overflow-x: hidden;
 }
+td{
+    padding-left:1rem;
+    border: 1px solid black !important;
+}
+table{
+    border:none !important
+}
+h1{
+    margin-top: 0px !important;
+}
 </style>
 </head>
 <body>
