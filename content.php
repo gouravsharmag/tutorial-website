@@ -103,6 +103,9 @@ td{
 table{
     border:none !important
 }
+td p{
+    word-break: break-word;
+}
 h1{
     margin-top: 0px !important;
 }
