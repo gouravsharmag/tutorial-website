@@ -49,8 +49,8 @@ while($row = $data->fetch_assoc()){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/tutorial-website/bootstrap/prism.css"> -->
-    <script src="/tutorial-website/bootstrap/prism.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="/bootstrap/prism.css"> -->
+    <script src="/bootstrap/prism.js"></script>
    
 <style>
 .tutorial-name{
@@ -246,6 +246,6 @@ h1{
            
         }
     </script>
-     <script src="/tutorial-website/bootstrap/prism.js"></script>
+     <script src="/bootstrap/prism.js"></script>
     </body>
 </html>
