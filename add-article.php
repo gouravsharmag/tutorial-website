@@ -37,7 +37,11 @@ while($row = $data->fetch_assoc()){
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/prism.css">
+
+    <link rel="stylesheet" data-mce-href="https://cdn.tiny.cloud/1/qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc/tinymce/4.9.11-104/plugins/codesample/css/prism.css" href="https://cdn.tiny.cloud/1/qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc/tinymce/4.9.11-104/plugins/codesample/css/prism.css">
     <script>
+
       tinymce.init({
         selector: '#mytextarea',
         plugins: [
@@ -54,9 +58,10 @@ while($row = $data->fetch_assoc()){
             {text: 'Python', value: 'python'},
             {text: 'Java', value: 'java'},
             {text: 'C', value: 'c'},
+            {text: 'SQL', value: 'sql'},
             {text: 'C#', value: 'csharp'},
             {text: 'C++', value: 'cpp'},
-            {text: 'SQL', value: 'sql'}
+
         ],
         toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
@@ -212,6 +217,9 @@ while($row = $data->fetch_assoc()){
                     },
             });
         }
+
+
     </script>
+        <script src="bootstrap/prism.js"></script>
   </body>
 </html>
