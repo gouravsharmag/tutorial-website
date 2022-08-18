@@ -29,8 +29,7 @@ $tutorial_name = array();
 while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
-$topic = str_replace('-', ' ', strtolower($_GET['alias']));   
-$topic = str_replace('30f', '', $topic);
+$topic = str_replace('-', ' ', strtolower($_GET['alias']));
 $query="select * from blog where blog_name='$topic'";
 $data=$conn->query($query);
 $content = array();
