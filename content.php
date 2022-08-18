@@ -212,7 +212,7 @@ h1{
 <?php } ?>
 
 </div>
-<?php echo htmlspecialchars_decode($topic = str_replace('%012', '\n', strtolower($content[0]['description'])));?>
+<?php echo htmlspecialchars_decode(str_replace('%012', '\n', strtolower($content[0]['description'])));?>
 
 <br><br>
 <div id="bottomnext">

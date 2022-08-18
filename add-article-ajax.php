@@ -28,6 +28,7 @@ if($_POST['type'] == 'save'){
     $topic_name = $_POST['topic_name'];
     $type = $_POST['type'];
     $description = htmlspecialchars($_POST['article'],ENT_QUOTES);
+    $description = str_replace('\n', '%012', strtolower($description));  
     $keywords = $_POST['keywords'];
     $meta_description = $_POST['meta_description'];
     $query = "select * from post where topic_name='$topic_name' and tutorial_name='$tutorial_name'";
