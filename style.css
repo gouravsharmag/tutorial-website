@@ -102,3 +102,6 @@
         background: #f4f4f5;
         margin-top:0px;
     }
+    .onlycontentinner li {
+        font-size: 12pt;
+    }

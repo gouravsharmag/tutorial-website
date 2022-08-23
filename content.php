@@ -99,7 +99,7 @@ h1 {
 body{
 overflow-x: hidden;
 }
-td{
+td,th{
     padding-left:1rem;
     border: 1px solid black !important;
 }
@@ -112,6 +112,7 @@ td p{
 h1{
     margin-top: 0px !important;
 }
+
 .token.operator {
     color: #9a6e3a;
     background: hsl(24deg 20% 95%);
