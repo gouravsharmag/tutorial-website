@@ -101,7 +101,7 @@ overflow-x: hidden;
 }
 td,th{
     padding-left:1rem;
-    border: 1.3px solid black!important;
+    border: 0.5px solid grey!important
 }
 table{
     border:none !important
