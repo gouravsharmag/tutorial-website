@@ -46,7 +46,7 @@ while($row = $data->fetch_assoc()){
         selector: '#mytextarea',
         plugins: [
           'advlist','autolink','checklist',
-          'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+          'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks'
           ,'fullscreen','insertdatetime','media','table','help','wordcount','codesample','code'
         ],
         codesample_languages: [
