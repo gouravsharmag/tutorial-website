@@ -45,7 +45,7 @@ while($row = $data->fetch_assoc()){
       tinymce.init({
         selector: '#mytextarea',
         plugins: [
-          'advlist','autolink','checklist',
+          'advlist','autolink',
           'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks'
           ,'fullscreen','insertdatetime','media','table','help','wordcount','codesample','code'
         ],
@@ -65,7 +65,7 @@ while($row = $data->fetch_assoc()){
         ],
         toolbar: 'undo redo | casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
-          'bullist numlist checklist outdent indent | removeformat | code table help |codesample |code '
+          'bullist numlist outdent indent | removeformat | code table help |codesample |code '
         ,content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
       });
     </script>
