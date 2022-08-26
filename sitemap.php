@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 while($row = $result->fetch_assoc()){
     $topic = str_replace(' ', '-', strtolower($row['blog_name']));  
     $sitemapText .= ' <url>
-                    <loc>'.$actual_link."/content/".$topic.'</loc>
+                    <loc>'.$actual_link."/blog-content/".$topic.'</loc>
                     <changefreq>daily</changefreq>
                     <priority>0.80</priority>
                 </url>';
