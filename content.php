@@ -228,7 +228,10 @@ span.spanh2{
 <?php } ?>
 
 </div>
-<?php echo htmlspecialchars_decode(str_replace('%012', '\n', $content[0]['description']));?>
+<?php 
+$description = str_replace('%012', '\n', $content[0]['description']);
+$description = str_replace('%013', '\t', $description);
+echo htmlspecialchars_decode($description);?>
 
 <br><br>
 <div id="bottomnext">
