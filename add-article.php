@@ -45,9 +45,9 @@ while($row = $data->fetch_assoc()){
       tinymce.init({
         selector: '#mytextarea',
         plugins: [
-          'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+          'advlist','autolink','checklist',
           'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
-          'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount','codesample','code'
+          ,'fullscreen','insertdatetime','media','table','help','wordcount','codesample','code'
         ],
         codesample_languages: [
             {text: 'HTML/XML', value: 'markup'},
@@ -63,9 +63,9 @@ while($row = $data->fetch_assoc()){
             {text: 'C++', value: 'cpp'},
 
         ],
-        toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+        toolbar: 'undo redo | casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
-          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help |codesample |code '
+          'bullist numlist checklist outdent indent | removeformat | code table help |codesample |code '
         ,content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
       });
     </script>

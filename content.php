@@ -101,7 +101,8 @@ overflow-x: hidden;
 }
 td,th{
     padding-left:1rem;
-    border: 0.5px solid grey!important
+    border: 0.5px solid grey!important;
+    font-family: sans-serif;
 }
 table{
     border:none !important
