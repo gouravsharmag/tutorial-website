@@ -112,10 +112,24 @@ td p{
 h1{
     margin-top: 0px !important;
 }
-
+h1,h2,h3,h4,h5,h6{
+        color:#000;
+    }
+    p{
+        color:#000;
+    }
+    body{
+        color:#000;
+    }
 .token.operator {
     color: #9a6e3a;
     background: hsl(24deg 20% 95%);
+}
+span.spanh2{
+    width: 97%;
+    display: block;
+    margin-top: 10px;
+    float: left;
 }
 </style>
 </head>
