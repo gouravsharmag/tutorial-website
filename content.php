@@ -11,7 +11,7 @@ $tutorial_id_query = "SELECT id FROM tutorial WHERE name = '$name_tutorial'";
 $tutorial_id_query = $conn->query($tutorial_id_query);
 $tutorial_id_data = $tutorial_id_query->fetch_assoc();
 $tutorial_id = $tutorial_id_data['id'];
-$query="select * from tutorial_list where tutorial_id='$tutorial_id'";
+$query="select * from tutorial_list where tutorial_id='$tutorial_id' and deleted=0";
 $data=$conn->query($query);
 $tutorial_list = array();
 while($row = $data->fetch_assoc()){
@@ -131,6 +131,9 @@ span.spanh2{
     display: block;
     margin-top: 10px;
     float: left;
+}
+ul{
+    list-style-type: disc;
 }
 </style>
 </head>
