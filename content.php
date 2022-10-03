@@ -99,11 +99,21 @@ h1 {
 body{
 overflow-x: hidden;
 }
-td,th{
+<?php if($name_tutorial == 'CSS'){?>
+    td,th{
+    padding-left:1rem;
+    border: 0.5px solid grey;
+    font-family: sans-serif;
+}
+<?php } else{?>
+    td,th{
     padding-left:1rem;
     border: 0.5px solid grey!important;
     font-family: sans-serif;
 }
+<?php }
+?>
+
 table{
     border:none !important
 }
