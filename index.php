@@ -25,6 +25,8 @@ while($row = $data->fetch_assoc()){
 <head>
 <meta charset="utf-8">
 <!-- Google tag (gtag.js) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5338048986508074"
+     crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K83LNDKS4F"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
