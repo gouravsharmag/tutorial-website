@@ -165,6 +165,18 @@ div.righthome {
                 <div class="row">
                 <div style="display: flow-root;padding-left: 1rem;padding-bottom:1rem;">
                 <h2 style="padding-left:1rem;"><?php echo $category[$j]['name'];?></h2>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5338048986508074"
+     crossorigin="anonymous"></script>
+<!-- Main add -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5338048986508074"
+     data-ad-slot="8483912215"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                 <?php 
                 $category_id = $category[$j]['id'];
                 $query="select * from tutorial where category_id='$category_id'";
