@@ -1,7 +1,7 @@
 <?php 
 include "connection.php";
 $conn=DbConnection();
-$query="select * from tutorial limit 10";
+$query="select * from tutorial where deleted='0' limit 10";
 $data=$conn->query($query);
 $tutorial_name = array();
 while($row = $data->fetch_assoc()){

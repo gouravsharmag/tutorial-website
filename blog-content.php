@@ -23,7 +23,7 @@ $blogs = array();
 while($row = $data->fetch_assoc()){
     $blogs[] = $row;
 }
-$query="select * from tutorial limit 10";
+$query="select * from tutorial where deleted='0' limit 10";
 $data=$conn->query($query);
 $tutorial_name = array();
 while($row = $data->fetch_assoc()){

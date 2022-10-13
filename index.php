@@ -1,7 +1,7 @@
 <?php 
 include "connection.php";
 $conn=DbConnection();
-$query="select * from tutorial limit 10";
+$query="select * from tutorial where deleted='0' limit 10";
 $data=$conn->query($query);
 $tutorial_name = array();
 while($row = $data->fetch_assoc()){
@@ -45,7 +45,7 @@ while($row = $data->fetch_assoc()){
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <!-- Latest compiled JavaScript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -179,7 +179,7 @@ div.righthome {
 </script>
                 <?php 
                 $category_id = $category[$j]['id'];
-                $query="select * from tutorial where category_id='$category_id'";
+                $query="select * from tutorial where category_id='$category_id' and deleted='0'";
                 $data=$conn->query($query);
                 $tutorial = array();
                 while($row = $data->fetch_assoc()){
