@@ -51,7 +51,7 @@ while($row = $data->fetch_assoc()){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="/bootstrap/prism.css"> -->
     <script src="/bootstrap/prism.js"></script>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
 <style>
 .tutorial-name{
     margin:0rem 2rem 2rem 0rem;
