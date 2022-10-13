@@ -26,6 +26,7 @@ while($row = $data->fetch_assoc()){
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 <style>
 .tutorial-name{
     padding: 0.5rem 0 3rem;
@@ -98,7 +99,8 @@ div.onlycontent {
 .blog_div{
     border-bottom: 1px solid #b7a9a9;
     margin: 0% 1%;
-    height: 10rem;
+    /* height: 10rem; */
+    padding-bottom: 1rem;
 }
 #container{
     background: #fff;
