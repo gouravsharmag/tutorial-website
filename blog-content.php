@@ -53,6 +53,8 @@ while($row = $data->fetch_assoc()){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/prism.js"></script>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
 <style>
     /* .App {
   text-align: center;
@@ -283,10 +285,10 @@ div.righthome {
 <h1 style="font-weight:bold"><?php echo $content[0]['blog_name'];?></h1>
 <div style="display: flex;">
 <div>
-    <img alt="" class="imgPost" src="https://www.inventeducation.com/wp-content/uploads/avatars/16/6095986ed3627-bpthumb.png">&nbsp;&nbsp;&nbsp;
+    <img alt="" class="imgPost" src="/6095986ed3627-bpthumb.png">&nbsp;&nbsp;&nbsp;
 </div>
 <div>
-<span style="color: rgb(219, 65, 119);">Satyam Tyagi</span>&nbsp;&nbsp;
+<span style="color: rgb(219, 65, 119);">Rose</span>&nbsp;&nbsp;
 <span style="position: relative;top: 10px;display:block;">Sept 15, 2021</span>
 </div>
 <!-- <div class="socializer sr-popup sr-40px sr-circle sr-opacity sr-pad sr-count-1">
