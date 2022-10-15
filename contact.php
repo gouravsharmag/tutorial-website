@@ -63,7 +63,7 @@ input{
 </style>
 <body>
 <button onclick="topFunction()" id="myBtn">⇧ TOP</button>
-    <div id="page" style="margin:-8px;background-color:#ffffff;"><div id="container"> <div class="header">
+    <div id="page" style="margin: -8px 0px 0px 0px;background-color:#ffffff;"><div id="container"> <div class="header">
         <table style="width:100%;height: 6rem;background-color: #fff;"> 
         <tbody><tr> <td> 
             <div style="clear:both;float:left;width:15rem;margin-top:1.6rem;margin-left:20px;font-size: 20px;color:#000000"> <a href="index.php" style="color:#000000;text-decoration:none;"><span style="background:#0fc6b0;padding: 3px 6px;border-radius: 50%;">A</span>pnaTutorial</a> </div> 
