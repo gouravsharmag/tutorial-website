@@ -224,6 +224,98 @@ div.righthome {
     width: 90%;
 }
 }
+td,th{
+    padding-left:1rem;
+    border: 0.5px solid grey!important;
+    font-family: sans-serif;
+}
+.ddsmoothmenu ul li a {
+    font-size: 17px;
+}
+.ddsmoothmenu ul li a.home-a{
+    position: relative;
+    bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+
+}
+.tut-button{
+    background: #282A35;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size:15px;
+}
+a.active{
+    font-weight: 800 !important;
+}
+.language-markup{
+    border: none;
+    border-left: 10px solid #7f6969;
+    background: #ddf6de;
+}
+h1 {
+    font-size: 42px;
+}
+#bottomnextup{
+    display: flex;
+    justify-content: right;
+}
+.tut-button:hover{
+    color:#fff;
+    text-decoration: none;
+    background: #000;
+}
+body{
+overflow-x: hidden;
+}
+<?php if($name_tutorial == 'CSS'){?>
+    td,th{
+    padding-left:1rem;
+    border: 0.5px solid grey;
+    font-family: sans-serif;
+}
+<?php } else{?>
+    td,th{
+    padding-left:1rem;
+    border: 0.5px solid grey!important;
+    font-family: sans-serif;
+}
+<?php }
+?>
+
+table{
+    border:none !important
+}
+td p{
+    word-break: break-word;
+}
+h1{
+    margin-top: 0px !important;
+}
+h1,h2,h3,h4,h5,h6{
+        color:#000;
+    }
+    p{
+        color:#000;
+    }
+    body{
+        color:#000;
+    }
+.token.operator {
+    color: #9a6e3a;
+    background: hsl(24deg 20% 95%);
+}
+span.spanh2{
+    width: 97%;
+    display: block;
+    margin-top: 10px;
+    float: left;
+}
+ul{
+    list-style-type: disc;
+}
 </style>
 </head>
 <body>
