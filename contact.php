@@ -32,6 +32,18 @@ while($row = $data->fetch_assoc()){
 label{
     width: 10%;
 }
+@media only screen and (max-width: 768px) {
+    label{
+        width: 25%;
+    }
+    textarea{
+        height: 15rem !important;
+        width: 65%;
+    }
+    input{
+        width: 65%;
+    }
+}
 textarea{
     height: 15rem !important;
     width: 35%;
@@ -105,7 +117,7 @@ input{
             <span class="f-twitter">
                 <section class="mb-0"><br><p><b>ApnaTutorial</b> is an online platform which is designed to learn new technologies with a highly interactive user interface.</p></section><section class=""><div class="row foot"><div class="col-lg-3 col-md-6 mb-1 mb-md-0">
                     <ul class="list-unstyled mb-0"><li><a class="foot-link" href="about.php" style="display: inherit;">About</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="privacy.php" style="display: inherit;">Privacy Policy</a></li></ul></div><div class="col-lg-3 col-md-6 mb-1 mb-md-0"><ul class="list-unstyled mb-0"><li><a class="foot-link" href="contact.php" style="display: inherit;">Contact Us</a></li></ul></div></div></section></div>
-                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright:<a class="text-white" href="/index.php">ApnaTutorial</a></div>
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2022 Copyright:<a class="text-white" href="/index.php">ApnaTutorial</a></div>
     </div>
     <script>
 function submitForm(){
