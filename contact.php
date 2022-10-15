@@ -54,10 +54,10 @@ input{
     }
     textarea{
         height: 15rem !important;
-        width: 65%;
+        width: 65% !important;
     }
     input{
-        width: 65%;
+        width: 65% !important;
     }
 }
 </style>
