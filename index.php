@@ -7,7 +7,7 @@ $tutorial_name = array();
 while($row = $data->fetch_assoc()){
     $tutorial_name[] = $row;
 }
-$query="select category.id,category.name from tutorial join category on tutorial.category_id=category.id group by category_id";
+$query="select category.id,category.name from tutorial join category on tutorial.category_id=category.id where category.deleted=0 group by category_id";
 $data=$conn->query($query);
 $category = array();
 while($row = $data->fetch_assoc()){
