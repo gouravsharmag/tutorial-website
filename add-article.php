@@ -1,6 +1,23 @@
 <?php
 include "connection.php";
 $conn=DbConnection();
+session_start();
+   if(!isset($_SESSION['user'])) {
+    //    echo "<p align='center'>Want to login again</p>";
+        header("Location: login.php");  
+   }
+   else {
+       $now = time();
+       if($now > $_SESSION['expire']) {
+           session_destroy();
+        //    echo "<p align='center'>Session has been destroyed!!</p>";
+           header("Location: login.php");  
+       }
+       else { 
+        //    header("Location: add-article.php");
+       }
+    }
+
 $query="select * from tutorial";
 $data=$conn->query($query);
 $tutorial_name = array();
